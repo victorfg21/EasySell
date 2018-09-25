@@ -38,14 +38,34 @@ class VendedorController extends Controller
         $cpf =str_replace("-", "", $cpf);
         $dados['cpf'] = $cpf;
 
-        Cliente::create($dados);
+        $cpf = $dados['cnpj'];
+        $cpf =str_replace(".", "", $cnpj);
+        $cpf =str_replace("-", "", $cnpj);
+        $cpf =str_replace("/", "", $cnpj);
+        $dados['cnpj'] = $cnpj;
+
+        $tel = $dados['telefone'];
+        $tel =str_replace("(", "", $tel);
+        $tel =str_replace(")", "", $tel);
+        $tel =str_replace("-", "", $tel);
+        $tel =str_replace(" ", "", $tel);
+        $dados['telefone'] = $tel;
+
+        $cel = $dados['celular'];
+        $cel =str_replace("(", "", $cel);
+        $cel =str_replace(")", "", $cel);
+        $cel =str_replace("-", "", $cel);
+        $cel =str_replace(" ", "", $cel);
+        $dados['celular'] = $cel;
+
+        Vendedor::create($dados);
 
         return redirect()->route('admin.vendedores');
     }
 
     public function editar($id)
     {
-        $registro = Cliente::find($id);
+        $registro = Vendedor::find($id);
         return view('admin.vendedores.editar', compact('registro'));
     }
 
@@ -82,19 +102,14 @@ class VendedorController extends Controller
         $cel =str_replace(" ", "", $cel);
         $dados['celular'] = $cel;
 
-        $cel = $dados['cep'];
-        $cel =str_replace(".", "", $cep);
-        $cel =str_replace("-", "", $cep);
-        $dados['cep'] = $cep;
-
-        Cliente::find($id)->update($dados);
+        Vendedor::find($id)->update($dados);
 
         return redirect()->route('admin.vendedores');
     }
 
     public function deletar($id)
     {
-        Cliente::find($id)->delete();
+        Vendedor::find($id)->delete();
 
         return redirect()->route('admin.vendedores');
     }

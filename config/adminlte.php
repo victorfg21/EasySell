@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'skin' => 'blue',
+    'skin' => 'green',
 
     /*
     |--------------------------------------------------------------------------
@@ -107,8 +107,8 @@ return [
     |
     */
 
-    'menu' => [        
-        'CADASTROS',        
+    'menu' => [
+        'CADASTROS',
         [//Pessoas
             'text'    => 'Pessoas',
             'icon'    => 'users',
@@ -119,11 +119,11 @@ return [
                     'submenu' => [
                         [
                             'text' => 'Novo',
-                            'url'  => '#',
+                            'url'  => 'admin/usuarios/novo',
                         ],
                         [
                             'text' => 'Editar',
-                            'url'  => '#',
+                            'url'  => 'admin/usuarios',
                         ],
                     ],
                 ],
@@ -133,11 +133,11 @@ return [
                     'submenu' => [
                         [
                             'text' => 'Novo',
-                            'url'  => '#',
+                            'url'  => 'admin/clientes/novo',
                         ],
                         [
                             'text' => 'Editar',
-                            'url'  => '#',
+                            'url'  => 'admin/clientes',
                         ],
                     ],
                 ],
@@ -147,11 +147,11 @@ return [
                     'submenu' => [
                         [
                             'text' => 'Novo',
-                            'url'  => '#',
+                            'url'  => 'admin/vendedores/novo',
                         ],
                         [
                             'text' => 'Editar',
-                            'url'  => '#',
+                            'url'  => 'admin/vendedores',
                         ],
                     ],
                 ],
@@ -161,28 +161,28 @@ return [
                     'submenu' => [
                         [
                             'text' => 'Novo',
-                            'url'  => '#',
+                            'url'  => 'admin/fornecedores/novo',
                         ],
                         [
                             'text' => 'Editar',
-                            'url'  => '#',
+                            'url'  => 'admin/fornecedores',
                         ],
                     ],
                 ],
-            ],            
-        ],        
+            ],
+        ],
         'ESTOQUE',
         [//Produtos
             'text'    => 'Produtos',
-            'icon'    => 'box',
+            'icon'    => 'cube',
             'submenu' => [
                 [
                     'text' => 'Novo',
-                    'url'  => '#',
+                    'url'  => 'admin/produtos/novo',
                 ],
                 [
                     'text' => 'Editar',
-                    'url'  => '#',
+                    'url'  => 'admin/produtos',
                 ],
                 [//Categoria
                     'text'    => 'Categoria',
@@ -191,14 +191,14 @@ return [
                     'submenu' => [
                         [
                             'text' => 'Novo',
-                            'url'  => '#',
+                            'url'  => 'admin/categorias/novo',
                         ],
                         [
                             'text' => 'Editar',
-                            'url'  => '#',
+                            'url'  => 'admin/categorias',
                         ],
-                    ],                    
-                ],  
+                    ],
+                ],
                 [//Tipo
                     'text'    => 'Tipo',
                     'url'     => '#',
@@ -206,31 +206,31 @@ return [
                     'submenu' => [
                         [
                             'text' => 'Novo',
-                            'url'  => '#',
+                            'url'  => 'admin/tipos/novo',
                         ],
                         [
                             'text' => 'Editar',
-                            'url'  => '#',
+                            'url'  => 'admin/tipos',
                         ],
-                    ],                    
-                ],                
-            ],            
+                    ],
+                ],
+            ],
         ],
         [//Estoque
             'text'    => 'Estoque',
-            'icon'    => 'box',
+            'icon'    => 'cubes',
             'submenu' => [
                 [
                     'text' => 'Geral',
-                    'url'  => '#',
+                    'url'  => 'admin/estoque',
                 ],
                 [
                     'text' => 'Saída',
-                    'url'  => '#',
+                    'url'  => 'admin/estoque/entrada',
                 ],
                 [
                     'text' => 'Entrada',
-                    'url'  => '#',
+                    'url'  => 'admin/estoque/saida',
                 ],
             ],
         ],
@@ -241,24 +241,24 @@ return [
             'submenu' => [
                 [
                     'text' => 'Novo',
-                    'url'  => '#',
+                    'url'  => 'admin/pagamentos/novo',
                 ],
                 [
                     'text' => 'Editar',
-                    'url'  => '#',
+                    'url'  => 'admin/pagamentos',
                 ],
-                [
+                [//Condições
                     'text' => 'Condições',
                     'url'  => '#',
                     'icon' => 'credit-card',
                     'submenu' => [
                         [
                             'text' => 'Novo',
-                            'url'  => '#',
+                            'url'  => 'admin/condicoes/novo',
                         ],
                         [
                             'text' => 'Editar',
-                            'url'  => '#',
+                            'url'  => 'admin/condicoes',
                         ],
                     ]
                 ],
@@ -270,17 +270,17 @@ return [
             'submenu' => [
                 [
                     'text' => 'Geral',
-                    'url'  => '#',
+                    'url'  => 'admin/vendas/novo',
                 ],
                 [
                     'text' => 'Novo',
-                    'url'  => '#',
-                ],                
+                    'url'  => 'admin/vendas',
+                ],
             ],
         ],
         [//Relatórios
             'text'    => 'Relatórios',
-            'icon'    => 'bar-chart',
+            'icon'    => 'line-chart',
             'submenu' => [
                 [
                     'text' => 'Venda X Cliente',
@@ -289,7 +289,7 @@ return [
                 [
                     'text' => 'Venda X Vendedores',
                     'url'  => '#',
-                ], 
+                ],
                 [
                     'text' => 'Venda X Produtos',
                     'url'  => '#',
@@ -297,7 +297,7 @@ return [
                 [
                     'text' => 'Total Vendas',
                     'url'  => '#',
-                ], 
+                ],
                 [
                     'text' => 'Fornecedores',
                     'url'  => '#',
@@ -305,7 +305,7 @@ return [
                 [
                     'text' => 'Balancete Período',
                     'url'  => '#',
-                ],                
+                ],
             ],
         ],
         [//Promoções
@@ -314,41 +314,41 @@ return [
             'submenu' => [
                 [
                     'text' => 'Novo',
-                    'url'  => '#',
+                    'url'  => 'admin/promocoes/novo',
                 ],
                 [
                     'text' => 'Editar',
-                    'url'  => '#',
-                ],                
+                    'url'  => 'admin/promocoes',
+                ],
             ],
-        ], 
+        ],
         'AVISOS',
         [//Novo Aviso
             'text' => 'Novo',
-            'url'  => '#',
+            'url'  => 'admin/avisos/novo',
         ],
         [//Todos Avisos
             'text'       => 'Todos',
             'icon_color' => 'green',
-            'url'  => '#',
-            'submenu' => [
+            'url'        => 'admin/avisos/0',
+            'submenu'    => [
                     [//Importante
                         'text'       => 'Importante',
                         'icon_color' => 'red',
-                        'url'  => '#',
+                        'url'  => 'admin/avisos/1',
                     ],
                     [//Atenção
                         'text'       => 'Atenção',
                         'icon_color' => 'yellow',
-                        'url'  => '#',
+                        'url'  => 'admin/avisos/2',
                     ],
                     [//Informação
                         'text'       => 'Informação',
                         'icon_color' => 'aqua',
-                        'url'  => '#',
+                        'url'  => 'admin/avisos/3',
                     ],
                 ]
-        ],       
+        ],
     ],
 
     /*

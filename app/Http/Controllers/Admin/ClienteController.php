@@ -40,6 +40,20 @@ class ClienteController extends Controller
         $cpf =str_replace("-", "", $cpf);
         $dados['cpf'] = $cpf;
 
+        $tel = $dados['telefone'];
+        $tel =str_replace("(", "", $tel);
+        $tel =str_replace(")", "", $tel);
+        $tel =str_replace("-", "", $tel);
+        $tel =str_replace(" ", "", $tel);
+        $dados['telefone'] = $tel;
+
+        $cel = $dados['celular'];
+        $cel =str_replace("(", "", $cel);
+        $cel =str_replace(")", "", $cel);
+        $cel =str_replace("-", "", $cel);
+        $cel =str_replace(" ", "", $cel);
+        $dados['celular'] = $cel;
+
         Cliente::create($dados);
 
         return redirect()->route('admin.clientes');
