@@ -14,6 +14,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Icon -->
-    <link rel="icon" href="{{ asset('img/favicon.ico') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon.png') }}">
 </head>
 <body>

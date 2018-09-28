@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Aviso;
-use App\Foto;
+use App\Fornecedor;
 
-class AvisoController extends Controller
+class FornecedorController extends Controller
 {
     //construtor
     public function __construct()
@@ -19,13 +16,13 @@ class AvisoController extends Controller
 
     public function index()
     {
-        $registros = Aviso::paginate(20);
-        return view('admin.avisos.index', compact('registros'));
+        $registros = Fornecedor::paginate(20);
+        return view('admin.fornecedores.index', compact('registros'));
     }
 
     public function novo()
     {
-        return view('admin.avisos.novo');
+        return view('admin.fornecedores.novo');
     }
 
     public function salvar(Request $req)
@@ -41,6 +38,12 @@ class AvisoController extends Controller
         $cpf =str_replace("-", "", $cpf);
         $dados['cpf'] = $cpf;
 
+        $cpf = $dados['cnpj'];
+        $cpf =str_replace(".", "", $cnpj);
+        $cpf =str_replace("-", "", $cnpj);
+        $cpf =str_replace("/", "", $cnpj);
+        $dados['cnpj'] = $cnpj;
+
         $tel = $dados['telefone'];
         $tel =str_replace("(", "", $tel);
         $tel =str_replace(")", "", $tel);
@@ -55,15 +58,15 @@ class AvisoController extends Controller
         $cel =str_replace(" ", "", $cel);
         $dados['celular'] = $cel;
 
-        Aviso::create($dados);
+        Fornecedor::create($dados);
 
-        return redirect()->route('admin.avisos');
+        return redirect()->route('admin.fornecedores');
     }
 
     public function editar($id)
     {
-        $registro = Aviso::find($id);
-        return view('admin.avisos.editar', compact('registro'));
+        $registro = Fornecedor::find($id);
+        return view('admin.fornecedores.editar', compact('registro'));
     }
 
     public function atualizar(Request $req, $id)
@@ -79,6 +82,12 @@ class AvisoController extends Controller
         $cpf =str_replace("-", "", $cpf);
         $dados['cpf'] = $cpf;
 
+        $cpf = $dados['cnpj'];
+        $cpf =str_replace(".", "", $cnpj);
+        $cpf =str_replace("-", "", $cnpj);
+        $cpf =str_replace("/", "", $cnpj);
+        $dados['cnpj'] = $cnpj;
+
         $tel = $dados['telefone'];
         $tel =str_replace("(", "", $tel);
         $tel =str_replace(")", "", $tel);
@@ -93,15 +102,15 @@ class AvisoController extends Controller
         $cel =str_replace(" ", "", $cel);
         $dados['celular'] = $cel;
 
-        Aviso::find($id)->update($dados);
+        Fornecedor::find($id)->update($dados);
 
-        return redirect()->route('admin.avisos');
+        return redirect()->route('admin.fornecedores');
     }
 
     public function deletar($id)
     {
-        Aviso::find($id)->delete();
+        Fornecedor::find($id)->delete();
 
-        return redirect()->route('admin.avisos');
+        return redirect()->route('admin.fornecedores');
     }
 }

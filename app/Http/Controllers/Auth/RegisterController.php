@@ -40,6 +40,12 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+    public function index()
+    {
+        $registros = RegistersUsers::paginate(20);
+        return view('admin.usuarios.index', compact('registros'));
+    }
+
     /**
      * Get a validator for an incoming registration request.
      *
