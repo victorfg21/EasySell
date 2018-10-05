@@ -18,14 +18,13 @@ class CreateVendedoresTable extends Migration
             $table->string('nome', 150);
             $table->string('rg', 20);
             $table->string('cpf', 11);
-            $table->string('cnpj', 14)->nullable($value = true);
+            $table->string('cnpj', 14);
             $table->date('nascimento');
             $table->string('email', 200)->nullable($value = true);
-            $table->string('telefone', 10)->nullable($value = true);
-            $table->string('celular', 11);
+            $table->string('telefone', 10);
+            $table->string('celular', 11)->nullable($value = true);
             $table->integer('numero');
             $table->string('endereco', 150);
-            $table->string('logradouro', 100);
             $table->string('bairro', 150);
             $table->string('cidade', 150);
             $table->string('estado', 2);

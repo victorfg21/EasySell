@@ -17,7 +17,7 @@ Route::get('/', function(){
     return view('auth/login');
 });
 
-Route::get('/home', ['as' => 'admin.clientes', 'uses' => 'Admin\ClienteController@index']);
+Route::get('home', ['as' => 'home', 'uses' => 'HomeController@index']);
 
 //Cliente
 Route::get('admin/clientes', ['as' => 'admin.clientes', 'uses' => 'Admin\ClienteController@index']);

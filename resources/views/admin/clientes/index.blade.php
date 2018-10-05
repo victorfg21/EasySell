@@ -34,7 +34,7 @@
                 @endforeach
                 </tbody>
             </table>
-            <a class="btn btn-default btn-lg" href="{{ route('admin.clientes.novo') }}"><i class="fa fa-plus fa-lg"></i></a>
+            <a class="btn btn-primary btn-lg" href="{{ route('admin.clientes.novo') }}"><i class="fa fa-plus fa-lg"></i></a>
         </div>
     </div>
     <div class="box-footer">

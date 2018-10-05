@@ -10,15 +10,15 @@
 
 <div class="box">
     <div class="box-header with-border">
-        <h3 class="box-title">Vendedores</h3>
+        <h3 class="box-title">Produtos</h3>
     </div>
     <div class="box-body">
         <div class="table-responsive">
             <table class="table table-hover table-striped">
-                <thead class="thead-dark">
+                <thead>
                     <tr>
-                        <th>Nome</th>
-                        <th>CPNJ/CPF</th>
+                        <th>Código</th>
+                        <th>Descrição</th>
                         <th>Editar</th>
                         <th>Remover</th>
                     </tr>
@@ -26,15 +26,15 @@
                 <tbody>
                 @foreach($registros as $registro)
                     <tr>
-                        <td>{{ $registro->nome }}</td>
-                        <td>{{ isset($registro->cnpj) ? $registro->cnpj : $registro->cpf }}</td>
-                        <td><a href="{{ route('admin.vendedores.editar', $registro->id) }}"><i class="fa fa-edit fa-lg"></i></a></td>
-                        <td><a href="{{ route('admin.vendedores.deletar', $registro->id) }}"><i class="fa fa-trash-alt fa-lg"></i></a></td>
+                        <td>{{ $registro->id }}</td>
+                        <td>{{ $registro->descricao }}</td>
+                        <td><a href="{{ route('admin.produtos.editar', $registro->id) }}"><i class="fa fa-edit fa-lg"></i></a></td>
+                        <td><a href="{{ route('admin.produtos.deletar', $registro->id) }}"><i class="fa fa-trash fa-lg"></i></a></td>
                     </tr>
                 @endforeach
                 </tbody>
             </table>
-            <a class="btn btn-primary btn-lg" href="{{ route('admin.vendedores.novo') }}"><i class="fa fa-plus fa-lg"></i></a>
+            <a class="btn btn-primary btn-lg" href="{{ route('admin.produtos.novo') }}"><i class="fa fa-plus fa-lg"></i></a>
         </div>
     </div>
     <div class="box-footer">
@@ -45,3 +45,5 @@
 </div>
 
 @stop
+
+

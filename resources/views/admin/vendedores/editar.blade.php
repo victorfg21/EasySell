@@ -22,7 +22,7 @@
             <div class="col-md-12 text-right">
                 <div class="form-group">
                     <!-- Button HTML (to Trigger Modal) -->
-                    <a href="#myModal" role="button" class="btn btn-lg btn-default" data-toggle="modal">Atualizar</a>
+                    <a href="#myModal" role="button" class="btn btn-lg btn-primary" data-toggle="modal">Atualizar</a>
                 </div>
             </div>
 
@@ -39,7 +39,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                            <input type="submit" value="Confirmar" class="btn btn-default" />
+                            <input type="submit" value="Confirmar" class="btn btn-primary" />
                         </div>
                     </div>
                 </div>

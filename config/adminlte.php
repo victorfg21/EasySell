@@ -108,6 +108,11 @@ return [
     */
 
     'menu' => [
+        [
+            'text' => 'HOME',
+            'url'  => 'home',
+            'icon' => 'home',
+        ],
         'CADASTROS',
         [//Pessoas
             'text'    => 'Pessoas',

@@ -24,7 +24,6 @@ class CreateClientesTable extends Migration
             $table->string('celular', 11);
             $table->integer('numero');
             $table->string('endereco', 150);
-            $table->string('logradouro', 100);
             $table->string('bairro', 150);
             $table->string('cidade', 150);
             $table->string('estado', 2);

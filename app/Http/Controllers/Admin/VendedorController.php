@@ -60,7 +60,7 @@ class VendedorController extends Controller
 
         Vendedor::create($dados);
 
-        return redirect()->route('admin.vendedores');
+        return redirect()->route('admin.vendedores.novo');
     }
 
     public function editar($id)

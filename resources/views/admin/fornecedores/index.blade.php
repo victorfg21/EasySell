@@ -27,14 +27,14 @@
                 @foreach($registros as $registro)
                     <tr>
                         <td>{{ $registro->nome }}</td>
-                        <td>{{ $registro->cnpj }}</td>
+                        <td>{{ isset($registro->cnpj) ? $registro->cnpj : $registro->cpf }}</td>
                         <td><a href="{{ route('admin.fornecedores.editar', $registro->id) }}"><i class="fa fa-edit fa-lg"></i></a></td>
                         <td><a href="{{ route('admin.fornecedores.deletar', $registro->id) }}"><i class="fa fa-trash-alt fa-lg"></i></a></td>
                     </tr>
                 @endforeach
                 </tbody>
             </table>
-            <a class="btn btn-default btn-lg" href="{{ route('admin.fornecedores.novo') }}"><i class="fa fa-plus fa-lg"></i></a>
+            <a class="btn btn-primary btn-lg" href="{{ route('admin.fornecedores.novo') }}"><i class="fa fa-plus fa-lg"></i></a>
         </div>
     </div>
     <div class="box-footer">

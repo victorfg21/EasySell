@@ -10,7 +10,7 @@
 
 <div class="box">
     <div class="box-header">
-        <h3 class="box-title">Editar Fornecedores</h3>
+        <h3 class="box-title">Editar Fornecedor</h3>
     </div>
     <div class="box-body">
         <form action="{{ route('admin.fornecedores.atualizar', $registro->id) }}" method="POST" enctype="multipart/form-data">
@@ -22,7 +22,7 @@
             <div class="col-md-12 text-right">
                 <div class="form-group">
                     <!-- Button HTML (to Trigger Modal) -->
-                    <a href="#myModal" role="button" class="btn btn-lg btn-default" data-toggle="modal">Atualizar</a>
+                    <a href="#myModal" role="button" class="btn btn-lg btn-primary" data-toggle="modal">Atualizar</a>
                 </div>
             </div>
 
@@ -31,15 +31,15 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title">Atualizar Vendedor</h4>
+                            <h4 class="modal-title">Atualizar Fornecedor</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
-                            <p>Confirmar atualização dos dados do vendedor?</p>
+                            <p>Confirmar atualização dos dados do fornecedor?</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                            <input type="submit" value="Confirmar" class="btn btn-default" />
+                            <input type="submit" value="Confirmar" class="btn btn-primary" />
                         </div>
                     </div>
                 </div>
