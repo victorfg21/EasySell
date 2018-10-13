@@ -19,7 +19,11 @@ class CreateAvisosTable extends Migration
             $table->string('descricao', 500);
             $table->dateTime('data_evento');
             $table->string('tipo');
-            $table->integer('id_foto')->nullable($value = true);
+            $table->integer('id_foto')->unsigned()
+            ->nullable($value = true)
+            ->references('id')
+            ->on('fotos');
+            
             $table->timestamps();
         });
     }

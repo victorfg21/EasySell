@@ -16,7 +16,12 @@ class CreatePagamentosTable extends Migration
         Schema::create('pagamentos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('descricao', 150);
-            $table->integer('id_condicao');
+            $table->integer('id_condicao')
+            ->unsigned()
+            ->nullable()
+            ->references('id')
+            ->on('condicoes');
+
             $table->decimal('desconto', 10, 2)->default(0.00);
             $table->decimal('acrescimo', 10, 2)->default(0.00);
             $table->timestamps();

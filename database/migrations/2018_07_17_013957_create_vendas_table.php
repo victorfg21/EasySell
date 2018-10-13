@@ -16,9 +16,24 @@ class CreateVendasTable extends Migration
         Schema::create('vendas', function (Blueprint $table) {
             $table->increments('id');
             $table->datetime('data_venda');
-            $table->integer('id_cliente');
-            $table->integer('id_vendedor');
-            $table->integer('id_pagamento');
+            $table->integer('id_cliente')
+            ->unsigned()
+            ->nullable()
+            ->references('id')
+            ->on('clientes');
+
+            $table->integer('id_vendedor')
+            ->unsigned()
+            ->nullable()
+            ->references('id')
+            ->on('vendedores');
+
+            $table->integer('id_pagamento')
+            ->unsigned()
+            ->nullable()
+            ->references('id')
+            ->on('pagamentos');
+
             $table->decimal('total_valor', 20, 2);
             $table->decimal('total_produtos', 20, 2);
             $table->timestamps();

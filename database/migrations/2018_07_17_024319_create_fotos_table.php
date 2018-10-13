@@ -15,11 +15,9 @@ class CreateFotosTable extends Migration
     {
         Schema::create('fotos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('tipo_conteudo', 200);
-            $table->string('descricao', 200)->nullable($value = true);
-            $table->string('extensao', 50);
-            $table->bigInteger('tamanho');
-            $table->binary('imagem');
+            $table->string('descricao', 200);
+            $table->string('extensao', 3);
+            $table->string('caminho', 500);            
             $table->timestamps();
         });
     }

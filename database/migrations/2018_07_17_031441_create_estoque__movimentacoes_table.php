@@ -15,8 +15,18 @@ class CreateEstoqueMovimentacoesTable extends Migration
     {
         Schema::create('estoque__movimentacoes', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_estoque');
-            $table->integer('id_produto');
+            $table->integer('id_estoque')
+            ->unsigned()
+            ->nullable()
+            ->references('id')
+            ->on('estoques');
+
+            $table->integer('id_produto')
+            ->unsigned()
+            ->nullable()
+            ->references('id')
+            ->on('produtos');
+
             $table->decimal('qtd_entrada', 20, 2)->nullable($value = true);;
             $table->decimal('qtd_saida', 20, 2)->nullable($value = true);;
             $table->decimal('valor_unitario', 20, 2);
