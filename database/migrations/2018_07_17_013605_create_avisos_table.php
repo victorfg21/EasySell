@@ -18,6 +18,7 @@ class CreateAvisosTable extends Migration
             $table->string('titulo', 30);
             $table->string('descricao', 500);
             $table->dateTime('data_evento');
+            $table->string('tipo');
             $table->integer('id_foto')->nullable($value = true);
             $table->timestamps();
         });

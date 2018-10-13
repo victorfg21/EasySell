@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'skin' => 'purple',
+    'skin' => 'blue',
 
     /*
     |--------------------------------------------------------------------------
@@ -190,7 +190,7 @@ return [
                     'url'  => 'admin/produtos',
                 ],
                 [//Categoria
-                    'text'    => 'Categoria',
+                    'text'    => 'Categorias',
                     'url'     => '#',
                     'icon'    => 'glass',
                     'submenu' => [
@@ -204,18 +204,33 @@ return [
                         ],
                     ],
                 ],
-                [//Tipo
-                    'text'    => 'Tipo',
+                [//Modelo
+                    'text'    => 'Modelos',
                     'url'     => '#',
-                    'icon'    => 'certificate',
+                    'icon'    => 'cogs',
                     'submenu' => [
                         [
                             'text' => 'Novo',
-                            'url'  => 'admin/tipos/novo',
+                            'url'  => 'admin/modelos/novo',
                         ],
                         [
                             'text' => 'Editar',
-                            'url'  => 'admin/tipos',
+                            'url'  => 'admin/modelos',
+                        ],
+                    ],
+                ],
+                [//Marca
+                    'text'    => 'Marcas',
+                    'url'     => '#',
+                    'icon'    => 'flag',
+                    'submenu' => [
+                        [
+                            'text' => 'Novo',
+                            'url'  => 'admin/marcas/novo',
+                        ],
+                        [
+                            'text' => 'Editar',
+                            'url'  => 'admin/marcas',
                         ],
                     ],
                 ],
@@ -331,6 +346,10 @@ return [
         [//Novo Aviso
             'text' => 'Novo',
             'url'  => 'admin/avisos/novo',
+        ],
+        [//Novo Aviso
+            'text' => 'Editar',
+            'url'  => 'admin/avisos',
         ],
         [//Todos Avisos
             'text'       => 'Todos',

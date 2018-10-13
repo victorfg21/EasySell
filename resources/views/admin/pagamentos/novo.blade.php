@@ -1,4 +1,4 @@
-modelos@extends('adminlte::page')
+@extends('adminlte::page')
 
 @section('title', 'easySell')
 
@@ -10,12 +10,12 @@ modelos@extends('adminlte::page')
 
 <div class="box">
     <div class="box-header">
-        <h3 class="box-title">Cadastrar Produto</h3>
+        <h3 class="box-title">Cadastrar Forma de Pagamento</h3>
     </div>
     <div class="box-body">
-        <form action="{{ route('admin.produtos.salvar') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.pagamentos.salvar') }}" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
-            @include('admin.produtos._form')
+            @include('admin.pagamentos._form')
 
             <div class="col-md-12 text-right">
                 <div class="form-group">
@@ -29,11 +29,11 @@ modelos@extends('adminlte::page')
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title">Cadastrar Produto</h4>
+                            <h4 class="modal-title">Cadastrar Forma de Pagamento</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
-                            <p>Confirmar cadastro do produto?</p>
+                            <p>Confirmar cadastro da forma de pagamento?</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -48,7 +48,7 @@ modelos@extends('adminlte::page')
 
 <div class="row">
     <div class="col-md-12">
-        <a href="{{ route('admin.produtos') }}"><i class="fa fa-arrow-circle-left fa-lg"></i>  Retornar para listagem</a>
+        <a href="{{ route('admin.pagamentos') }}"><i class="fa fa-arrow-circle-left fa-lg"></i>  Retornar para listagem</a>
     </div>
 </div>
 

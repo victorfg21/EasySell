@@ -51,6 +51,22 @@ Route::get('admin/produtos/editar/{id}', ['as' => 'admin.produtos.editar', 'uses
 Route::put('admin/produtos/atualizar/{id}', ['as' => 'admin.produtos.atualizar', 'uses' => 'Admin\ProdutoController@atualizar']);
 Route::get('admin/produtos/deletar/{id}', ['as' => 'admin.produtos.deletar', 'uses' => 'Admin\ProdutoController@deletar']);
 
+//Modelo
+Route::get('admin/modelos', ['as' => 'admin.modelos', 'uses' => 'Admin\ModeloController@index']);
+Route::get('admin/modelos/novo', ['as' => 'admin.modelos.novo', 'uses' => 'Admin\ModeloController@novo']);
+Route::post('admin/modelos/salvar', ['as' => 'admin.modelos.salvar', 'uses' => 'Admin\ModeloController@salvar']);
+Route::get('admin/modelos/editar/{id}', ['as' => 'admin.modelos.editar', 'uses' => 'Admin\ModeloController@editar']);
+Route::put('admin/modelos/atualizar/{id}', ['as' => 'admin.modelos.atualizar', 'uses' => 'Admin\ModeloController@atualizar']);
+Route::get('admin/modelos/deletar/{id}', ['as' => 'admin.modelos.deletar', 'uses' => 'Admin\ModeloController@deletar']);
+
+//Marca
+Route::get('admin/marcas', ['as' => 'admin.marcas', 'uses' => 'Admin\MarcaController@index']);
+Route::get('admin/marcas/novo', ['as' => 'admin.marcas.novo', 'uses' => 'Admin\MarcaController@novo']);
+Route::post('admin/marcas/salvar', ['as' => 'admin.marcas.salvar', 'uses' => 'Admin\MarcaController@salvar']);
+Route::get('admin/marcas/editar/{id}', ['as' => 'admin.marcas.editar', 'uses' => 'Admin\MarcaController@editar']);
+Route::put('admin/marcas/atualizar/{id}', ['as' => 'admin.marcas.atualizar', 'uses' => 'Admin\MarcaController@atualizar']);
+Route::get('admin/marcas/deletar/{id}', ['as' => 'admin.marcas.deletar', 'uses' => 'Admin\MarcaController@deletar']);
+
 //Estoque
 Route::get('admin/estoque', ['as' => 'admin.estoque', 'uses' => 'Admin\EstoqueController@index']);
 Route::put('admin/estoque/entrada', ['as' => 'admin.estoque.entrada', 'uses' => 'Admin\EstoqueController@novo']);
@@ -85,14 +101,6 @@ Route::post('admin/categorias/salvar', ['as' => 'admin.categorias.salvar', 'uses
 Route::get('admin/categorias/editar/{id}', ['as' => 'admin.categorias.editar', 'uses' => 'Admin\CategoriaController@editar']);
 Route::put('admin/categorias/atualizar/{id}', ['as' => 'admin.categorias.atualizar', 'uses' => 'Admin\CategoriaController@atualizar']);
 Route::get('admin/categorias/deletar/{id}', ['as' => 'admin.categorias.deletar', 'uses' => 'Admin\CategoriaController@deletar']);
-
-//Tipo
-Route::get('admin/tipos', ['as' => 'admin.tipos', 'uses' => 'Admin\TipoController@index']);
-Route::get('admin/tipos/novo', ['as' => 'admin.tipos.novo', 'uses' => 'Admin\TipoController@novo']);
-Route::post('admin/tipos/salvar', ['as' => 'admin.tipos.salvar', 'uses' => 'Admin\TipoController@salvar']);
-Route::get('admin/tipos/editar/{id}', ['as' => 'admin.tipos.editar', 'uses' => 'Admin\TipoController@editar']);
-Route::put('admin/tipos/atualizar/{id}', ['as' => 'admin.tipos.atualizar', 'uses' => 'Admin\TipoController@atualizar']);
-Route::get('admin/tipos/deletar/{id}', ['as' => 'admin.tipos.deletar', 'uses' => 'Admin\TipoController@deletar']);
 
 //Aviso
 Route::get('admin/avisos', ['as' => 'admin.avisos', 'uses' => 'Admin\AvisoController@index']);

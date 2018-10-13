@@ -30,31 +30,6 @@ class AvisoController extends Controller
 
     public function salvar(Request $req)
     {
-        $dados = $req->all();
-
-        $cep = $dados['cep'];
-        $cep =str_replace("-", "", $cep);
-        $dados['cep'] = $cep;
-
-        $cpf = $dados['cpf'];
-        $cpf =str_replace(".", "", $cpf);
-        $cpf =str_replace("-", "", $cpf);
-        $dados['cpf'] = $cpf;
-
-        $tel = $dados['telefone'];
-        $tel =str_replace("(", "", $tel);
-        $tel =str_replace(")", "", $tel);
-        $tel =str_replace("-", "", $tel);
-        $tel =str_replace(" ", "", $tel);
-        $dados['telefone'] = $tel;
-
-        $cel = $dados['celular'];
-        $cel =str_replace("(", "", $cel);
-        $cel =str_replace(")", "", $cel);
-        $cel =str_replace("-", "", $cel);
-        $cel =str_replace(" ", "", $cel);
-        $dados['celular'] = $cel;
-
         Aviso::create($dados);
 
         return redirect()->route('admin.avisos');
@@ -68,31 +43,6 @@ class AvisoController extends Controller
 
     public function atualizar(Request $req, $id)
     {
-        $dados = $req->all();
-
-        $cep = $dados['cep'];
-        $cep =str_replace("-", "", $cep);
-        $dados['cep'] = $cep;
-
-        $cpf = $dados['cpf'];
-        $cpf =str_replace(".", "", $cpf);
-        $cpf =str_replace("-", "", $cpf);
-        $dados['cpf'] = $cpf;
-
-        $tel = $dados['telefone'];
-        $tel =str_replace("(", "", $tel);
-        $tel =str_replace(")", "", $tel);
-        $tel =str_replace("-", "", $tel);
-        $tel =str_replace(" ", "", $tel);
-        $dados['telefone'] = $tel;
-
-        $cel = $dados['celular'];
-        $cel =str_replace("(", "", $cel);
-        $cel =str_replace(")", "", $cel);
-        $cel =str_replace("-", "", $cel);
-        $cel =str_replace(" ", "", $cel);
-        $dados['celular'] = $cel;
-
         Aviso::find($id)->update($dados);
 
         return redirect()->route('admin.avisos');
