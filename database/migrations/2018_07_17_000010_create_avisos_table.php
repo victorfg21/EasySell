@@ -19,10 +19,9 @@ class CreateAvisosTable extends Migration
             $table->string('descricao', 500);
             $table->dateTime('data_evento');
             $table->string('tipo');
-            $table->integer('id_foto')->unsigned()
-            ->nullable($value = true)
-            ->references('id')
-            ->on('fotos');
+            $table->unsignedInteger('foto_id');
+
+            $table->foreign('foto_id')->references('id')->on('fotos');
             
             $table->timestamps();
         });

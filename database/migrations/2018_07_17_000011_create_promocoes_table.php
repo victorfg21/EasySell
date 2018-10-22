@@ -18,26 +18,17 @@ class CreatePromocoesTable extends Migration
             $table->string('descricao', 150);
             $table->dateTime('inicio');
             $table->dateTime('fim');
-            $table->decimal('desconto', 20, 2);
-            $table->integer('id_categoria')
-            ->unsigned()
-            ->nullable()
-            ->references('id')
-            ->on('categorias');
+            $table->decimal('desconto', 20, 2)->default(0.00);
+            $table->unsignedInteger('categoria_id');
+            $table->unsignedInteger('marca_id');
+            $table->unsignedInteger('modelo_id');
 
-            $table->integer('id_marca')
-            ->unsigned()
-            ->nullable($value = true)
-            ->references('id')
-            ->on('marcas');
-            
-            $table->integer('id_modelo')
-            ->unsigned()
-            ->nullable($value = true)
-            ->references('id')
-            ->on('modelos');
-            
             $table->timestamps();
+
+            $table->foreign('categoria_id')->references('id')->on('categorias');
+            $table->foreign('marca_id')->references('id')->on('marcas');
+            $table->foreign('modelo_id')->references('id')->on('modelos');        
+            
         });
     }
 

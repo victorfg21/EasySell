@@ -15,28 +15,18 @@ class CreateVendaLinhasTable extends Migration
     {
         Schema::create('venda_linhas', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_venda')
-            ->unsigned()
-            ->nullable()
-            ->references('id')
-            ->on('vendas');
+            $table->decimal('quantidade', 20, 2)->default(0.00);
+            $table->decimal('valor_linha', 20, 2)->default(0.00);
+            $table->decimal('valor_unitario', 20, 2)->default(0.00);
+            $table->unsignedInteger('venda_id');
+            $table->unsignedInteger('produto_id');
+            $table->unsignedInteger('promocao_id')->nullable();
 
-            $table->integer('id_produto')
-            ->unsigned()
-            ->nullable()
-            ->references('id')
-            ->on('produtos');
-
-            $table->integer('id_promocao')
-            ->unsigned()
-            ->nullable($value = true)
-            ->references('id')
-            ->on('promocoes');
-
-            $table->decimal('quantidade', 20, 2);
-            $table->decimal('valor_linha', 20, 2);
-            $table->decimal('valor_unitario', 20, 2);
             $table->timestamps();
+
+            $table->foreign('venda_id')->references('id')->on('vendas');
+            $table->foreign('produto_id')->references('id')->on('produtos');
+            $table->foreign('promocao_id')->references('id')->on('promocoes');
         });
     }
 

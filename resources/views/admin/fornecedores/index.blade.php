@@ -18,7 +18,7 @@
                 <thead class="thead-dark">
                     <tr>
                         <th>Nome</th>
-                        <th>CPNJ/CPF</th>
+                        <th>CPNJ</th>
                         <th>Editar</th>
                         <th>Remover</th>
                     </tr>
@@ -29,7 +29,7 @@
                         <td>{{ $registro->nome }}</td>
                         <td>{{ isset($registro->cnpj) ? $registro->cnpj : $registro->cpf }}</td>
                         <td><a href="{{ route('admin.fornecedores.editar', $registro->id) }}"><i class="fa fa-edit fa-lg"></i></a></td>
-                        <td><a href="{{ route('admin.fornecedores.deletar', $registro->id) }}"><i class="fa fa-trash-alt fa-lg"></i></a></td>
+                        <td><a href="{{ route('admin.fornecedores.deletar', $registro->id) }}"><i class="fa fa-trash fa-lg"></i></a></td>
                     </tr>
                 @endforeach
                 </tbody>

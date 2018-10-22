@@ -16,16 +16,14 @@ class CreatePagamentosTable extends Migration
         Schema::create('pagamentos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('descricao', 150);
-            $table->integer('id_condicao')
-            ->unsigned()
-            ->nullable()
-            ->references('id')
-            ->on('condicoes');
-
             $table->decimal('desconto', 10, 2)->default(0.00);
             $table->decimal('acrescimo', 10, 2)->default(0.00);
+            $table->unsignedInteger('condicao_id');
+
             $table->timestamps();
-        });
+
+            $table->foreign('condicao_id')->references('id')->on('condicoes');
+        });        
     }
 
     /**

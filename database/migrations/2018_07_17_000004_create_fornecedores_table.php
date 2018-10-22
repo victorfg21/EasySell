@@ -16,11 +16,11 @@ class CreateFornecedoresTable extends Migration
         Schema::create('fornecedores', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome', 150);
-            $table->string('cnpj', 14)->nullable($value = true);
-            $table->string('numInsc', 14)->nullable($value = true);
+            $table->string('cnpj', 14);
+            $table->string('numInsc', 14)->nullable();
             $table->string('email', 200);
-            $table->string('telefone', 10)->nullable($value = true);
-            $table->string('celular', 11);
+            $table->string('telefone', 10);
+            $table->string('celular', 11)->nullable();
             $table->integer('numero');
             $table->string('endereco', 150);
             $table->string('bairro', 150);

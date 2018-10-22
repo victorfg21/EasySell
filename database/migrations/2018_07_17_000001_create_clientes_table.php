@@ -19,15 +19,15 @@ class CreateClientesTable extends Migration
             $table->string('rg', 20);
             $table->string('cpf', 11);
             $table->date('nascimento');
-            $table->string('email', 200)->nullable($value = true);
-            $table->string('telefone', 10)->nullable($value = true);
+            $table->string('email', 200)->nullable();
+            $table->string('telefone', 10)->nullable();
             $table->string('celular', 11);
             $table->integer('numero');
             $table->string('endereco', 150);
             $table->string('bairro', 150);
             $table->string('cidade', 150);
             $table->string('estado', 2);
-            $table->string('cep', 8)->nullable($value = true);
+            $table->string('cep', 8)->nullable();
             $table->timestamps();
         });
     }

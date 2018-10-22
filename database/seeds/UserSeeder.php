@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\User;
 
-class UsuarioSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,8 +16,9 @@ class UsuarioSeeder extends Seeder
             'name' => "Admin",
             'email' => "admin@mail.com",
             'password' => bcrypt("123456"),
+            'nivel' => 1,
         ];
-
+        
         if (User::where('email', '=', $dados['email'])->count()) {
             $usuario = User::where('email', '=', $dados['email'])->first();
             $usuario->update($dados);

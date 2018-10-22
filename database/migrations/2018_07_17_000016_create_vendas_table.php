@@ -16,27 +16,18 @@ class CreateVendasTable extends Migration
         Schema::create('vendas', function (Blueprint $table) {
             $table->increments('id');
             $table->datetime('data_venda');
-            $table->integer('id_cliente')
-            ->unsigned()
-            ->nullable()
-            ->references('id')
-            ->on('clientes');
+            $table->decimal('total_valor', 20, 2)->default(0.00);
+            $table->decimal('total_produtos', 20, 2)->default(0.00);
+            $table->unsignedInteger('cliente_id');
+            $table->unsignedInteger('vendedor_id');
+            $table->unsignedInteger('pagamento_id');
 
-            $table->integer('id_vendedor')
-            ->unsigned()
-            ->nullable()
-            ->references('id')
-            ->on('vendedores');
-
-            $table->integer('id_pagamento')
-            ->unsigned()
-            ->nullable()
-            ->references('id')
-            ->on('pagamentos');
-
-            $table->decimal('total_valor', 20, 2);
-            $table->decimal('total_produtos', 20, 2);
             $table->timestamps();
+
+            $table->foreign('cliente_id')->references('id')->on('clientes');
+            $table->foreign('vendedor_id')->references('id')->on('vendedores');
+            $table->foreign('pagamento_id')->references('id')->on('pagamentos');
+
         });
     }
 

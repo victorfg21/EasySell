@@ -14,15 +14,14 @@ class CreateEstoquesTable extends Migration
     public function up()
     {
         Schema::create('estoques', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('id_produto')
-            ->unsigned()
-            ->nullable()
-            ->references('id')
-            ->on('produtos');
-            
-            $table->decimal('quantidade', 20, 2);
+            $table->increments('id');            
+            $table->decimal('quantidade', 20, 2)->default(0.00);
+            $table->unsignedInteger('produto_id');
+
             $table->timestamps();
+
+            $table->foreign('produto_id')->references('id')->on('produtos');
+            
         });
     }
 

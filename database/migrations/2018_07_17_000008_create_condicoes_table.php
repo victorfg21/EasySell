@@ -17,7 +17,7 @@ class CreateCondicoesTable extends Migration
             $table->increments('id');
             $table->string('descricao', 150);
             $table->boolean('vista');
-            $table->integer('qtd_parcelas')->default(1);
+            $table->integer('qtd_parcelas');
             $table->timestamps();
         });
     }
