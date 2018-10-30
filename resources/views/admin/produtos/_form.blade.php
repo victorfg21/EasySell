@@ -9,7 +9,15 @@
         </div>
         <div class="form-group">
             <label for="Categoria" class="control-label">Categoria</label>
-            <input for="Categoria" class="form-control" type="text" name="categoria" value="{{ isset($registro->categoria) ? $registro->categoria : '' }}" required/>
+            <select for="Categoria" class="form-control" name="categoria" required>
+                @foreach ($categoria_list as $item => $descricao)
+                    @if ($item == $registro->Categoria->id)
+                        <option value="{{ $item }}" selected>{{ $descricao }}</option>
+                    @else
+                        <option value="{{ $item }}">{{ $descricao }}</option>
+                    @endif
+                @endforeach
+            </select>
         </div>
         <div class="form-group">
             <label for="Marca" class="control-label">Marca</label>
@@ -24,16 +32,12 @@
             <input for="Modelo" class="form-control" type="text" name="modelo" value="{{ isset($registro->modelo) ? $registro->modelo : '' }}"/>
         </div>
         <div class="form-group">
-            <label for="Catalogo" class="control-label">Catálogo</label>
-            <input for="Catalogo" class="form-control" type="text" name="catalogo" value="{{ isset($registro->catalogo) ? $registro->catalogo : '' }}"/>
-        </div>
-        <div class="form-group">
-            <label for="Cor" class="control-label">Cor</label>
-            <input for="Cor" class="form-control" type="text" name="telefone" value="{{ isset($registro->cor) ? $registro->cor : '' }}"/>
-        </div>
-        <div class="form-group">
             <label for="Peso" class="control-label">Peso</label>
             <input for="Peso" class="form-control" type="text" name="peso" value="{{ isset($registro->peso) ? $registro->peso : '' }}" required/>
+        </div>
+        <div class="form-group">
+            <label for="Valor" class="control-label">Valor Unitário</label>
+            <input for="Valor" class="form-control" type="text" name="valor" value="{{ isset($registro->valor) ? $registro->valor : '' }}" required/>
         </div>
         <div class="form-group">
             <label for="Valor" class="control-label">Valor Unitário</label>

@@ -13,7 +13,7 @@
         </div>
         <div class="form-group">
             <label for="CPF" class="control-label">CPF</label>
-            <input for="CPF" class="form-control" type="text" name="cpf" value="{{ isset($registro->cpf) ? $registro->cpf : '' }}" required/>
+            <input for="CPF" class="form-control cpf" type="text" name="cpf" value="{{ isset($registro->cpf) ? $registro->cpf : '' }}" required/>
         </div>
         <div class="form-group">
             <label for="Nasc" class="control-label">Data de Nascimento</label>
@@ -21,15 +21,15 @@
         </div>
         <div class="form-group">
             <label for="Email" class="control-label">Email</label>
-            <input for="Email" class="form-control" type="text" name="email" value="{{ isset($registro->email) ? $registro->email : '' }}"/>
+            <input for="Email" class="form-control" type="email" name="email" value="{{ isset($registro->email) ? $registro->email : '' }}"/>
         </div>
         <div class="form-group">
             <label for="Telefone" class="control-label">Telefone Fixo</label>
-            <input for="Telefone" class="form-control" type="text" name="telefone" value="{{ isset($registro->telefone) ? $registro->telefone : '' }}"/>
+            <input for="Telefone" class="form-control telFixo" type="text" name="telefone" value="{{ isset($registro->telefone) ? $registro->telefone : '' }}"/>
         </div>
         <div class="form-group">
             <label for="Celular" class="control-label">Celular</label>
-            <input for="Celular" class="form-control" type="text" name="celular" value="{{ isset($registro->celular) ? $registro->celular : '' }}" required/>
+            <input for="Celular" class="form-control telCel" type="text" name="celular" value="{{ isset($registro->celular) ? $registro->celular : '' }}" required/>
         </div>
     </div>
 
@@ -43,7 +43,7 @@
                     <label for="Cep" class="control-label">CEP</label>
                     <div class="row">
                         <div class="col-md-5">
-                            <input for="Cep" class="form-control" type="text" name="cep" value="{{ isset($registro->cep) ? $registro->cep : '' }}"/>
+                            <input for="Cep" class="form-control cep" type="text" name="cep" value="{{ isset($registro->cep) ? $registro->cep : '' }}"/>
                         </div>
                         <div class="col-md-2">
                             <a class="btn btn-default" id="cep">Buscar CEP</a>

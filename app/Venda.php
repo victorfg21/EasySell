@@ -9,7 +9,7 @@ class Venda extends Model
     protected $table = 'vendas';
 
     protected $fillable = [
-        'data_venda', 'id_cliente', 'id_vendedor', 
-        'id_pagamento', 'total_valor', 'total_produtos'
+        'data_venda', 'cliente_id', 'vendedor_id', 
+        'pagamento_id', 'total_valor', 'total_produtos'
     ];
 }

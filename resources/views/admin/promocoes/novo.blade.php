@@ -10,12 +10,12 @@
 
 <div class="box">
     <div class="box-header">
-        <h3 class="box-title">Cadastrar Produto</h3>
+        <h3 class="box-title">Cadastrar Promoção</h3>
     </div>
     <div class="box-body">
-        <form action="{{ route('admin.produtos.salvar') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.promocoes.salvar') }}" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
-            @include('admin.produtos._form')
+            @include('admin.promocoes._form')
 
             <div class="col-md-12 text-right">
                 <div class="form-group">
@@ -29,11 +29,11 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title">Cadastrar Produto</h4>
+                            <h4 class="modal-title">Cadastrar Promoção</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
-                            <p>Confirmar cadastro do produto?</p>
+                            <p>Confirmar cadastro do promoção?</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -48,7 +48,7 @@
 
 <div class="row">
     <div class="col-md-12">
-        <a href="{{ route('admin.produtos') }}"><i class="fa fa-arrow-circle-left fa-lg"></i>  Retornar para listagem</a>
+        <a href="{{ route('admin.promocoes') }}"><i class="fa fa-arrow-circle-left fa-lg"></i>  Retornar para listagem</a>
     </div>
 </div>
 

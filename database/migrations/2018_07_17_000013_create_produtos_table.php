@@ -6,6 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateProdutosTable extends Migration
 {
+    protected $table = 'produtos';
     /**
      * Run the migrations.
      *
@@ -13,7 +14,7 @@ class CreateProdutosTable extends Migration
      */
     public function up()
     {
-        Schema::create('produtos', function (Blueprint $table) {
+        Schema::create($this->table, function (Blueprint $table) {
             $table->increments('id');
             $table->string('descricao', 150);
             $table->decimal('peso', 20, 2)->nullable();
@@ -42,6 +43,6 @@ class CreateProdutosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('produtos');
+        Schema::dropIfExists($this->table);
     }
 }

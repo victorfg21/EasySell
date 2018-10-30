@@ -18,9 +18,10 @@ $(document).ready(function () {
 
 $("#cep").click(function () {
     var cep = $('input[name="cep"]').val() + "/json/";
+    var cepFormatado = cep.replace(".", "").replace("-", "");
+    $.get("https://viacep.com.br/ws/" + cepFormatado, function (data) {
 
-    $.get("https://viacep.com.br/ws/" + cep, function (data) {
-
+        console.log(data.localidade);
         $("#comboEstado").val('MG');
         $('input[name="cidade"]').val(data.localidade);
         $('input[name="bairro"]').val(data.bairro);

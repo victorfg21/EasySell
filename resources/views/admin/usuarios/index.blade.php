@@ -17,7 +17,6 @@
             <table class="table table-hover table-striped">
                 <thead>
                     <tr>
-                        <th>Código</th>
                         <th>Descrição</th>
                         <th>Editar</th>
                         <th>Remover</th>
@@ -26,7 +25,6 @@
                 <tbody>
                 @foreach($registros as $registro)
                     <tr>
-                        <td>{{ $registro->id }}</td>
                         <td>{{ $registro->descricao }}</td>
                         <td><a href="{{ route('admin.produtos.editar', $registro->id) }}"><i class="fa fa-edit fa-lg"></i></a></td>
                         <td><a href="{{ route('admin.produtos.deletar', $registro->id) }}"><i class="fa fa-trash fa-lg"></i></a></td>

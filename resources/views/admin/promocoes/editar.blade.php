@@ -10,14 +10,14 @@
 
 <div class="box">
     <div class="box-header">
-        <h3 class="box-title">Editar Produto</h3>
+        <h3 class="box-title">Editar Promoção</h3>
     </div>
     <div class="box-body">
-        <form action="{{ route('admin.produtos.atualizar', $registro->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('admin.promocoes.atualizar', $registro->id) }}" method="POST" enctype="multipart/form-data">
             {{ csrf_field() }}
             <input type="hidden" name="_method" value="put"/>
 
-            @include('admin.produtos._form')
+            @include('admin.promocoes._form')
 
             <div class="col-md-12 text-right">
                 <div class="form-group">
@@ -31,11 +31,11 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title">Atualizar Produto</h4>
+                            <h4 class="modal-title">Atualizar Promoção</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         </div>
                         <div class="modal-body">
-                            <p>Confirmar atualização dos dados do produto?</p>
+                            <p>Confirmar atualização dos dados do promoção?</p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -49,7 +49,7 @@
 </div>
 <div class="row">
     <div class="col-md-12">
-        <a href="{{ route('admin.produtos') }}"><i class="fa fa-arrow-circle-left fa-lg"></i>  Retornar para listagem</a>
+        <a href="{{ route('admin.promocoes') }}"><i class="fa fa-arrow-circle-left fa-lg"></i>  Retornar para listagem</a>
     </div>
 </div>
 

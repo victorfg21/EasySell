@@ -9,7 +9,7 @@ class Estoque extends Model
     protected $table = 'estoques';
 
     protected $fillable = [
-        'id_produto', 'quantidade'
+        'produto_id', 'quantidade'
     ];
 
     

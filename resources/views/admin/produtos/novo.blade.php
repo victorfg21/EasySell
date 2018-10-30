@@ -1,4 +1,4 @@
-modelos@extends('adminlte::page')
+@extends('adminlte::page')
 
 @section('title', 'easySell')
 

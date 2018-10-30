@@ -10,6 +10,6 @@ class Promocao extends Model
 
     protected $fillable = [
         'descricao', 'inicio', 'fim', 'desconto', 
-        'id_categoria', 'id_marca', 'id_modelo'
+        'categoria_id', 'marca_id', 'modelo_id'
     ];
 }

@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Produto;
+use App\Categoria;
+use App\Marca;
+use App\Modelo;
 use App\Foto;
 
 class ProdutoController extends Controller
@@ -23,7 +26,10 @@ class ProdutoController extends Controller
 
    public function novo()
    {
-       return view('admin.produtos.novo');
+       $categoria_list = Categoria::pluck('descricao', 'id')->all();
+       return view('admin.produtos.novo', [
+            'categoria_list' => $categoria_list,
+       ]);
    }
 
    public function salvar(Request $req)
@@ -37,7 +43,11 @@ class ProdutoController extends Controller
    public function editar($id)
    {
        $registro = Produto::find($id);
-       return view('admin.produtos.editar', compact('registro'));
+       $categoria_list = Categoria::pluck('descricao', 'id')->all();
+       return view('admin.produtos.editar', [
+           'registro' => $registro,
+           'categoria_list' => $categoria_list,
+        ]);
    }
 
    public function atualizar(Request $req, $id)

@@ -33,6 +33,7 @@ class ClienteController extends Controller
 
         $cep = $dados['cep'];
         $cep =str_replace("-", "", $cep);
+        $cep =str_replace(".", "", $cep);
         $dados['cep'] = $cep;
 
         $cpf = $dados['cpf'];
@@ -71,6 +72,7 @@ class ClienteController extends Controller
 
         $cep = $dados['cep'];
         $cep =str_replace("-", "", $cep);
+        $cep =str_replace(".", "", $cep);
         $dados['cep'] = $cep;
 
         $cpf = $dados['cpf'];

@@ -47,8 +47,9 @@
 <script src="{{ asset('vendor/adminlte/vendor/jquery/dist/jquery.min.js') }}"></script>
 <script src="{{ asset('vendor/adminlte/vendor/jquery/dist/jquery.slimscroll.min.js') }}"></script>
 <script src="{{ asset('vendor/adminlte/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('js/cep.js') }}"></script>
-<script src="{{ asset('jquery.maskedinput.js') }}"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script src="{{ asset('js/jquery.maskedinput.js') }}"></script>
 
 @if(config('adminlte.plugins.select2'))
     <!-- Select2 -->
@@ -64,6 +65,10 @@
     <!-- ChartJS -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
 @endif
+
+<!--JavaScript do Sistema-->
+<script src="{{ asset('js/cep.js') }}"></script>
+<script src="{{ asset('js/mascaraform.js') }}"></script>
 
 @yield('adminlte_js')
 

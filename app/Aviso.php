@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Aviso extends Model
 {
-    protected $table = 'clientes';
+    protected $table = 'avisos';
 
     protected $fillable = [
-        'titulo, descricao, data_evento, id_foto'
+        'titulo, descricao, data_evento, foto_id'
     ];
 }
