@@ -27,7 +27,7 @@
                 @foreach($registros as $registro)
                     <tr>
                         <td>{{ $registro->nome }}</td>
-                        <td>{{ $registro->cpf }}</td>
+                        <td><span class="cpf">{{ $registro->cpf }}</span></td>
                         <td><a href="{{ route('admin.clientes.editar', $registro->id) }}"><i class="fa fa-edit fa-lg"></i></a></td>
                         <td><a href="{{ route('admin.clientes.deletar', $registro->id) }}"><i class="fa fa-trash fa-lg"></i></a></td>
                     </tr>

@@ -28,8 +28,8 @@
                 @foreach($registros as $registro)
                     <tr>
                         <td>{{ $registro->descricao }}</td>
-                        <td>{{ $registro->inicio }}</td>
-                        <td>{{ $registro->fim }}</td>
+                        <td><span class="data">{{ date( 'd/m/Y' , strtotime($registro->inicio)) }}</span></td>
+                        <td><span class="data">{{ date( 'd/m/Y' , strtotime($registro->fim)) }}</span></td>
                         <td><a href="{{ route('admin.promocoes.editar', $registro->id) }}"><i class="fa fa-edit fa-lg"></i></a></td>
                         <td><a href="{{ route('admin.promocoes.deletar', $registro->id) }}"><i class="fa fa-trash fa-lg"></i></a></td>
                     </tr>

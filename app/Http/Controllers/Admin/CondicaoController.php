@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+
+use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Condicao;
 
@@ -16,7 +18,7 @@ class CondicaoController extends Controller
 
     public function index()
     {
-        $registros = Condicao::paginate(20);
+        $registros = Condicao::orderBy('descricao')->paginate(20);
         return view('admin.condicoes.index', compact('registros'));
     }
 
@@ -42,6 +44,8 @@ class CondicaoController extends Controller
     public function atualizar(Request $req, $id)
     {
         $dados = $req->all();
+        $dados['vista'] = (!isset($dados['vista']))? false : true;
+
         Condicao::find($id)->update($dados);
 
         return redirect()->route('admin.condicoes');

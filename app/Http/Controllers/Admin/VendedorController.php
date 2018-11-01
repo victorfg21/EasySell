@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Http\Request;
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Vendedor;
@@ -28,35 +30,11 @@ class VendedorController extends Controller
     public function salvar(Request $req)
     {
         $dados = $req->all();
-
-        $cep = $dados['cep'];
-        $cep =str_replace("-", "", $cep);
-        $dados['cep'] = $cep;
-
-        $cpf = $dados['cpf'];
-        $cpf =str_replace(".", "", $cpf);
-        $cpf =str_replace("-", "", $cpf);
-        $dados['cpf'] = $cpf;
-
-        $cpf = $dados['cnpj'];
-        $cpf =str_replace(".", "", $cnpj);
-        $cpf =str_replace("-", "", $cnpj);
-        $cpf =str_replace("/", "", $cnpj);
-        $dados['cnpj'] = $cnpj;
-
-        $tel = $dados['telefone'];
-        $tel =str_replace("(", "", $tel);
-        $tel =str_replace(")", "", $tel);
-        $tel =str_replace("-", "", $tel);
-        $tel =str_replace(" ", "", $tel);
-        $dados['telefone'] = $tel;
-
-        $cel = $dados['celular'];
-        $cel =str_replace("(", "", $cel);
-        $cel =str_replace(")", "", $cel);
-        $cel =str_replace("-", "", $cel);
-        $cel =str_replace(" ", "", $cel);
-        $dados['celular'] = $cel;
+        $dados['cep'] = str_replace(".", "", str_replace("-", "", $dados['cep']));
+        $dados['cpf'] = str_replace("/", "", str_replace(".", "", str_replace("-", "", $dados['cpf'])));
+        $dados['cnpj'] = str_replace("/", "", str_replace(".", "", str_replace("-", "", $dados['cnpj'])));
+        $dados['telefone'] = str_replace(" ", "", str_replace("-", "", str_replace(")", "", str_replace("(", "", $dados['telefone']))));
+        $dados['celular'] = str_replace(" ", "", str_replace("-", "", str_replace(")", "", str_replace("(", "", $dados['celular']))));
 
         Vendedor::create($dados);
 
@@ -72,35 +50,11 @@ class VendedorController extends Controller
     public function atualizar(Request $req, $id)
     {
         $dados = $req->all();
-
-        $cep = $dados['cep'];
-        $cep =str_replace("-", "", $cep);
-        $dados['cep'] = $cep;
-
-        $cpf = $dados['cpf'];
-        $cpf =str_replace(".", "", $cpf);
-        $cpf =str_replace("-", "", $cpf);
-        $dados['cpf'] = $cpf;
-
-        $cpf = $dados['cnpj'];
-        $cpf =str_replace(".", "", $cnpj);
-        $cpf =str_replace("-", "", $cnpj);
-        $cpf =str_replace("/", "", $cnpj);
-        $dados['cnpj'] = $cnpj;
-
-        $tel = $dados['telefone'];
-        $tel =str_replace("(", "", $tel);
-        $tel =str_replace(")", "", $tel);
-        $tel =str_replace("-", "", $tel);
-        $tel =str_replace(" ", "", $tel);
-        $dados['telefone'] = $tel;
-
-        $cel = $dados['celular'];
-        $cel =str_replace("(", "", $cel);
-        $cel =str_replace(")", "", $cel);
-        $cel =str_replace("-", "", $cel);
-        $cel =str_replace(" ", "", $cel);
-        $dados['celular'] = $cel;
+        $dados['cep'] = str_replace(".", "", str_replace("-", "", $dados['cep']));
+        $dados['cpf'] = str_replace("/", "", str_replace(".", "", str_replace("-", "", $dados['cpf'])));
+        $dados['cnpj'] = str_replace("/", "", str_replace(".", "", str_replace("-", "", $dados['cnpj'])));
+        $dados['telefone'] = str_replace(" ", "", str_replace("-", "", str_replace(")", "", str_replace("(", "", $dados['telefone']))));
+        $dados['celular'] = str_replace(" ", "", str_replace("-", "", str_replace(")", "", str_replace("(", "", $dados['celular']))));
 
         Vendedor::find($id)->update($dados);
 

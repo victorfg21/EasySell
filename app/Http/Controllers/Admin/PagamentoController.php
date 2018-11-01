@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+
+use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Pagamento;
+use App\Condicao;
 
 class PagamentoController extends Controller
 {
@@ -22,7 +25,10 @@ class PagamentoController extends Controller
 
     public function novo()
     {
-        return view('admin.pagamentos.novo');
+        $condicao_list = Condicao::orderBy('descricao')->pluck('descricao', 'id')->all();
+        return view('admin.pagamentos.novo', [
+            'condicao_list' => $condicao_list,
+        ]);
     }
 
     public function salvar(Request $req)
@@ -35,8 +41,12 @@ class PagamentoController extends Controller
 
     public function editar($id)
     {
+        $condicao_list = Condicao::orderBy('descricao')->pluck('descricao', 'id')->all();
         $registro = Pagamento::find($id);
-        return view('admin.pagamentos.editar', compact('registro'));
+        return view('admin.pagamentos.editar', [
+            'registro' => $registro,
+            'condicao_list' => $condicao_list,
+        ]);
     }
 
     public function atualizar(Request $req, $id)

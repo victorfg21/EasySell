@@ -30,30 +30,10 @@ class ClienteController extends Controller
     public function salvar(Request $req)
     {
         $dados = $req->all();
-
-        $cep = $dados['cep'];
-        $cep =str_replace("-", "", $cep);
-        $cep =str_replace(".", "", $cep);
-        $dados['cep'] = $cep;
-
-        $cpf = $dados['cpf'];
-        $cpf =str_replace(".", "", $cpf);
-        $cpf =str_replace("-", "", $cpf);
-        $dados['cpf'] = $cpf;
-
-        $tel = $dados['telefone'];
-        $tel =str_replace("(", "", $tel);
-        $tel =str_replace(")", "", $tel);
-        $tel =str_replace("-", "", $tel);
-        $tel =str_replace(" ", "", $tel);
-        $dados['telefone'] = $tel;
-
-        $cel = $dados['celular'];
-        $cel =str_replace("(", "", $cel);
-        $cel =str_replace(")", "", $cel);
-        $cel =str_replace("-", "", $cel);
-        $cel =str_replace(" ", "", $cel);
-        $dados['celular'] = $cel;
+        $dados['cep'] = str_replace(".", "", str_replace("-", "", $dados['cep']));
+        $dados['cpf'] = str_replace(".", "",str_replace("-", "", $dados['cpf']));
+        $dados['telefone'] = str_replace(" ", "", str_replace("-", "", str_replace(")", "", str_replace("(", "", $dados['telefone']))));
+        $dados['celular'] = str_replace(" ", "", str_replace("-", "", str_replace(")", "", str_replace("(", "", $dados['celular']))));
 
         Cliente::create($dados);
 
@@ -69,30 +49,10 @@ class ClienteController extends Controller
     public function atualizar(Request $req, $id)
     {
         $dados = $req->all();
-
-        $cep = $dados['cep'];
-        $cep =str_replace("-", "", $cep);
-        $cep =str_replace(".", "", $cep);
-        $dados['cep'] = $cep;
-
-        $cpf = $dados['cpf'];
-        $cpf =str_replace(".", "", $cpf);
-        $cpf =str_replace("-", "", $cpf);
-        $dados['cpf'] = $cpf;
-
-        $tel = $dados['telefone'];
-        $tel =str_replace("(", "", $tel);
-        $tel =str_replace(")", "", $tel);
-        $tel =str_replace("-", "", $tel);
-        $tel =str_replace(" ", "", $tel);
-        $dados['telefone'] = $tel;
-
-        $cel = $dados['celular'];
-        $cel =str_replace("(", "", $cel);
-        $cel =str_replace(")", "", $cel);
-        $cel =str_replace("-", "", $cel);
-        $cel =str_replace(" ", "", $cel);
-        $dados['celular'] = $cel;
+        $dados['cep'] = str_replace(".", "", str_replace("-", "", $dados['cep']));
+        $dados['cpf'] = str_replace(".", "",str_replace("-", "", $dados['cpf']));
+        $dados['telefone'] = str_replace(" ", "", str_replace("-", "", str_replace(")", "", str_replace("(", "", $dados['telefone']))));
+        $dados['celular'] = str_replace(" ", "", str_replace("-", "", str_replace(")", "", str_replace("(", "", $dados['celular']))));
 
         Cliente::find($id)->update($dados);
 

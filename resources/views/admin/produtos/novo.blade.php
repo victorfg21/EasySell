@@ -51,6 +51,5 @@
         <a href="{{ route('admin.produtos') }}"><i class="fa fa-arrow-circle-left fa-lg"></i>  Retornar para listagem</a>
     </div>
 </div>
-
 @stop
 
