@@ -9,9 +9,13 @@ class Promocao extends Model
     protected $table = 'promocoes';
 
     protected $fillable = [
-        'descricao', 'inicio', 'fim', 'desconto', 
+        'descricao', 'inicio', 'fim', 'desconto', 'pagamento_id', 
         'categoria_id', 'marca_id', 'modelo_id'
     ];
+
+    public function Pagamento(){
+        return $this->hasOne(Pagamento::class, 'id', 'pagamento_id');
+    }
 
     public function Categoria(){
         return $this->hasOne(Categoria::class, 'id', 'categoria_id');

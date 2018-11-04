@@ -8,6 +8,10 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Venda;
 use App\Venda_Linha;
+use App\Cliente;
+use App\Vendedor;
+use App\Pagamento;
+use App\Promocao;
 
 class VendaController extends Controller
 {
@@ -25,17 +29,16 @@ class VendaController extends Controller
 
     public function novo()
     {
-        $cliente_list = Fornecedor::pluck('nome', 'id')->all();
-        $vendedor_list = Categoria::pluck('nome', 'id')->all();
-        $marca_list = Marca::pluck('descricao', 'id')->all();
-        $modelo_list = Modelo::pluck('descricao', 'id')->all();
-        return view('admin.produtos.novo', [
-            'fornecedor_list' => $fornecedor_list,
-            'categoria_list' => $categoria_list,
-            'marca_list' => $marca_list,
-            'modelo_list' => $modelo_list,
+        $cliente_list = Cliente::pluck('nome', 'id')->all();
+        $vendedor_list = Vendedor::pluck('nome', 'id')->all();
+        $pagamento_list = Pagamento::pluck('descricao', 'id')->all();
+        $promocao_list = Promocao::pluck('descricao', 'id')->all();
+        return view('admin.vendas.novo', [
+            'cliente_list' => $cliente_list,
+            'vendedor_list' => $vendedor_list,
+            'pagamento_list' => $pagamento_list,
+            'promocao_list' => $promocao_list,
         ]);
-        return view('admin.vendas.novo');
     }
 
     public function salvar(Request $req)

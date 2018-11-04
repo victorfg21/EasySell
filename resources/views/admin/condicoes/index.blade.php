@@ -17,9 +17,9 @@
             <table class="table table-hover table-striped">
                 <thead>
                     <tr>
-                        <th>Descrição</th>
-                        <th>Editar</th>
-                        <th>Remover</th>
+                        <th class="col-xs-10">Descrição</th>
+                        <th class="col-xs-1">Editar</th>
+                        <th class="col-xs-1">Remover</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,7 +37,9 @@
     </div>
     <div class="box-footer">
         <div class="row">
-            {{ $registros->links()}}
+            <div class="col-md-12">
+                {{ $registros->links()}}
+            </div>
         </div>
     </div>
 </div>

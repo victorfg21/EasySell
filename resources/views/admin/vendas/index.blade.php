@@ -41,7 +41,9 @@
     </div>
     <div class="box-footer">
         <div class="row">
-            {{ $registros->links()}}
+            <div class="col-md-12">
+                {{ $registros->links()}}
+            </div>
         </div>
     </div>
 </div>

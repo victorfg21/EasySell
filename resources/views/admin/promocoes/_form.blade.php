@@ -20,6 +20,22 @@
             <input for="Desconto" class="form-control dinheiro" type="text" name="desconto" value="{{ isset($registro->desconto) ? $registro->desconto : '' }}" required/>
         </div>
         <div class="form-group">
+            <label for="Pagamento" class="control-label">Forma de Pagamento</label>
+            <select for="Pagamento" class="form-control js-example-basic-single" name="pagamento" required>
+                @foreach ($pagamento_list as $item => $descricao)
+                    @if(isset($registro->Pagamento->id))
+                        @if ($item == $registro->Pagamento->id)
+                            <option value="{{ $item }}" selected>{{ $descricao }}</option>
+                        @else
+                            <option value="{{ $item }}">{{ $descricao }}</option>
+                        @endif
+                    @else
+                        <option value="{{ $item }}">{{ $descricao }}</option>
+                    @endif
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group">
             <label for="Categoria" class="control-label">Categoria</label>
             <select for="Categoria" class="form-control js-example-basic-single" name="categoria">
                 <option value=""></option>

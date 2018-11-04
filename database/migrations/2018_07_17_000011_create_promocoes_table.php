@@ -19,12 +19,14 @@ class CreatePromocoesTable extends Migration
             $table->dateTime('inicio');
             $table->dateTime('fim');
             $table->decimal('desconto', 20, 2)->default(0.00);
+            $table->unsignedInteger('pagamento_id')->nullable();
             $table->unsignedInteger('categoria_id')->nullable();
             $table->unsignedInteger('marca_id')->nullable();
             $table->unsignedInteger('modelo_id')->nullable();
 
             $table->timestamps();
 
+            $table->foreign('pagamento_id')->references('id')->on('pagamentos');
             $table->foreign('categoria_id')->references('id')->on('categorias');
             $table->foreign('marca_id')->references('id')->on('marcas');
             $table->foreign('modelo_id')->references('id')->on('modelos');        

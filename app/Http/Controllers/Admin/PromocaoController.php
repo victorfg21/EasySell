@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Promocao;
+use App\Pagamento;
 use App\Categoria;
 use App\Marca;
 use App\Modelo;
@@ -27,11 +28,13 @@ class PromocaoController extends Controller
 
     public function novo()
     {
+        $pagamento_list = Pagamento::pluck('descricao', 'id')->all();
         $categoria_list = Categoria::pluck('descricao', 'id')->all();
         $marca_list = Marca::pluck('descricao', 'id')->all();
         $modelo_list = Modelo::pluck('descricao', 'id')->all();
 
         return view('admin.promocoes.novo', [
+            'pagamento_list' => $pagamento_list,
             'categoria_list' => $categoria_list,
             'marca_list' => $marca_list,
             'modelo_list' => $modelo_list,
@@ -49,11 +52,13 @@ class PromocaoController extends Controller
     public function editar($id)
     {
         $registro = Promocao::find($id);
+        $pagamento_list = Pagamento::pluck('descricao', 'id')->all();
         $categoria_list = Categoria::pluck('descricao', 'id')->all();
         $marca_list = Marca::pluck('descricao', 'id')->all();
         $modelo_list = Modelo::pluck('descricao', 'id')->all();
         return view('admin.promocoes.editar', [
             'registro' => $registro,
+            'pagamento_list' => $pagamento_list,
             'categoria_list' => $categoria_list,
             'marca_list' => $marca_list,
             'modelo_list' => $modelo_list,
