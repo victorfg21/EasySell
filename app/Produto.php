@@ -10,7 +10,7 @@ class Produto extends Model
 
     protected $fillable = [
         'descricao', 'fornecedor_id', 'categoria_id', 'marca_id', 'modelo_id', 'foto_id', 'peso', 
-        'data_cadastro', 'valor'
+        'data_cadastro', 'valor', 'codigo_barra'
     ];
 
     public function Fornecedor(){

@@ -42,7 +42,7 @@
                 <div class="form-group">
                     <label for="Cep" class="control-label">CEP</label>
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <input for="Cep" class="form-control cep" type="text" name="cep" value="{{ isset($registro->cep) ? $registro->cep : '' }}"/>
                         </div>
                         <div class="col-md-2">
@@ -55,7 +55,7 @@
                     <input for="Bairro" class="form-control" type="text" name="bairro" value="{{ isset($registro->bairro) ? $registro->bairro : '' }}" required/>
                 </div>
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="Endereco" class="control-label">Endereço</label>
                             <input for="Endereco" class="form-control" type="text" name="endereco" value="{{ isset($registro->endereco) ? $registro->endereco : '' }}" required/>

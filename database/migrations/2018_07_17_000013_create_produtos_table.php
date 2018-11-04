@@ -17,6 +17,7 @@ class CreateProdutosTable extends Migration
         Schema::create($this->table, function (Blueprint $table) {
             $table->increments('id');
             $table->string('descricao', 150);
+            $table->text('codigo_barra');
             $table->decimal('peso', 20, 2)->nullable();
             $table->date('data_cadastro');
             $table->decimal('valor', 20, 2)->default(0.00);

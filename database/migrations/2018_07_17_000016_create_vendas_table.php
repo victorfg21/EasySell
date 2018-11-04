@@ -18,6 +18,7 @@ class CreateVendasTable extends Migration
             $table->datetime('data_venda');
             $table->decimal('total_valor', 20, 2)->default(0.00);
             $table->decimal('total_produtos', 20, 2)->default(0.00);
+            $table->boolean('cancelado');
             $table->unsignedInteger('cliente_id');
             $table->unsignedInteger('vendedor_id');
             $table->unsignedInteger('pagamento_id');

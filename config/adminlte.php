@@ -290,11 +290,11 @@ return [
             'submenu' => [
                 [
                     'text' => 'Geral',
-                    'url'  => 'admin/vendas/novo',
+                    'url'  => 'admin/vendas',
                 ],
                 [
                     'text' => 'Novo',
-                    'url'  => 'admin/vendas',
+                    'url'  => 'admin/vendas/novo',
                 ],
             ],
         ],
