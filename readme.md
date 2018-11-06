@@ -1,3 +1,9 @@
+## Sobre Projeto - easySell
+
+Projeto desenvolvido para estudo principalmente do framework Laravel e também utilização de outras ferramentas, tecnologias e linguagens, como JavaScript, CSS, JQuery, Bootstrap e PostgreSql.
+
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
