@@ -2,8 +2,7 @@
 
 Projeto desenvolvido para estudo principalmente do framework Laravel e também utilização de outras ferramentas, tecnologias e linguagens, como PHP, JavaScript, CSS, JQuery, Bootstrap e PostgreSql.
 
-
-
+<br>
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
