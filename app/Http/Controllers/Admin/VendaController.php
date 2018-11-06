@@ -44,6 +44,9 @@ class VendaController extends Controller
     public function salvar(Request $req)
     {
         $dados = $req->all();
+        $dados['peso'] = $metodos->moeda($dados['peso']);
+        $dados['valor'] = $metodos->moeda($dados['valor']);
+
         Venda::create($dados);
 
         return redirect()->route('admin.vendas');

@@ -11,5 +11,6 @@ $factory->define(App\Produto::class, function (Faker $faker) {
         'categoria_id' => $faker->categoria_id,
         'marca_id' => $faker->marca_id,
         'modelo_id' => $faker->modelo_id,
+        'codigo_barra' => $faker->codigo_barra,
     ];
 });

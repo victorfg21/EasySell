@@ -20,6 +20,7 @@ class ProdutoSeeder extends Seeder
             'categoria_id' => 2,
             'marca_id' => 1,
             'modelo_id' => 2,
+            'codigo_barra' => "0000000001",
         ];
         
         if (Produto::where('descricao', '=', $dados['descricao'])->count()) {
@@ -37,6 +38,7 @@ class ProdutoSeeder extends Seeder
             'categoria_id' => 2,
             'marca_id' => 1,
             'modelo_id' => 3,
+            'codigo_barra' => "0000000002",
         ];
         
         if (Produto::where('descricao', '=', $dados['descricao'])->count()) {
@@ -54,6 +56,7 @@ class ProdutoSeeder extends Seeder
             'categoria_id' => 2,
             'marca_id' => 2,
             'modelo_id' => 6,
+            'codigo_barra' => "0000000003",
         ];
         
         if (Produto::where('descricao', '=', $dados['descricao'])->count()) {
@@ -71,6 +74,7 @@ class ProdutoSeeder extends Seeder
             'categoria_id' => 1,
             'marca_id' => 2,
             'modelo_id' => 5,
+            'codigo_barra' => "0000000004",
         ];
         
         if (Produto::where('descricao', '=', $dados['descricao'])->count()) {
@@ -88,6 +92,7 @@ class ProdutoSeeder extends Seeder
             'categoria_id' => 1,
             'marca_id' => 2,
             'modelo_id' => 4,
+            'codigo_barra' => "0000000005",
         ];
         
         if (Produto::where('descricao', '=', $dados['descricao'])->count()) {
@@ -105,6 +110,7 @@ class ProdutoSeeder extends Seeder
             'categoria_id' => 3,
             'marca_id' => 3,
             'modelo_id' => 1,
+            'codigo_barra' => "0000000006",
         ];
         
         if (Produto::where('descricao', '=', $dados['descricao'])->count()) {

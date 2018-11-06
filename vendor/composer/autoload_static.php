@@ -79,6 +79,8 @@ class ComposerStaticInit6edb7dabf077d53561a43166bb31c0ba
         'J' => 
         array (
             'JeroenNoten\\LaravelAdminLte\\' => 28,
+            'JakubOnderka\\PhpConsoleHighlighter\\' => 35,
+            'JakubOnderka\\PhpConsoleColor\\' => 29,
         ),
         'I' => 
         array (
@@ -103,6 +105,7 @@ class ComposerStaticInit6edb7dabf077d53561a43166bb31c0ba
         'C' => 
         array (
             'Cron\\' => 5,
+            'CodeItNow\\' => 10,
         ),
         'A' => 
         array (
@@ -237,6 +240,14 @@ class ComposerStaticInit6edb7dabf077d53561a43166bb31c0ba
         array (
             0 => __DIR__ . '/..' . '/jeroennoten/laravel-adminlte/src',
         ),
+        'JakubOnderka\\PhpConsoleHighlighter\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src',
+        ),
+        'JakubOnderka\\PhpConsoleColor\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src',
+        ),
         'Illuminate\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
@@ -273,6 +284,10 @@ class ComposerStaticInit6edb7dabf077d53561a43166bb31c0ba
         array (
             0 => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron',
         ),
+        'CodeItNow\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -300,17 +315,6 @@ class ComposerStaticInit6edb7dabf077d53561a43166bb31c0ba
             'Mockery' => 
             array (
                 0 => __DIR__ . '/..' . '/mockery/mockery/library',
-            ),
-        ),
-        'J' => 
-        array (
-            'JakubOnderka\\PhpConsoleHighlighter' => 
-            array (
-                0 => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src',
-            ),
-            'JakubOnderka\\PhpConsoleColor' => 
-            array (
-                0 => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src',
             ),
         ),
         'D' => 
@@ -343,6 +347,7 @@ class ComposerStaticInit6edb7dabf077d53561a43166bb31c0ba
         'App\\Http\\Controllers\\Admin\\ModeloController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ModeloController.php',
         'App\\Http\\Controllers\\Admin\\PagamentoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PagamentoController.php',
         'App\\Http\\Controllers\\Admin\\ProdutoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ProdutoController.php',
+        'App\\Http\\Controllers\\Admin\\PromocaoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PromocaoController.php',
         'App\\Http\\Controllers\\Admin\\VendaController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/VendaController.php',
         'App\\Http\\Controllers\\Admin\\VendedorController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/VendedorController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
@@ -351,13 +356,13 @@ class ComposerStaticInit6edb7dabf077d53561a43166bb31c0ba
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
-        'App\\Http\\Controllers\\PromocaoController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PromocaoController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Libs\\BarCode' => __DIR__ . '/../..' . '/app/Libs/BarCode.php',
         'App\\Marca' => __DIR__ . '/../..' . '/app/Marca.php',
         'App\\Modelo' => __DIR__ . '/../..' . '/app/Modelo.php',
         'App\\Pagamento' => __DIR__ . '/../..' . '/app/Pagamento.php',
@@ -382,6 +387,44 @@ class ComposerStaticInit6edb7dabf077d53561a43166bb31c0ba
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
         'CategoriaSeeder' => __DIR__ . '/../..' . '/database/seeds/CategoriaSeeder.php',
         'ClienteSeeder' => __DIR__ . '/../..' . '/database/seeds/ClienteSeeder.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINArgumentException' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINArgumentException.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINBarcode' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINBarcode.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINBarcode1D' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINBarcode1D.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINColor' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINColor.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINDrawException' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINDrawException.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINDrawing' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINDrawing.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINFont' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINFont.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINFontFile' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINFontFile.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINFontPhp' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINFontPhp.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINLabel' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINLabel.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINParseException' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINParseException.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINcodabar' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINcodabar.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINcode11' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINcode11.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINcode128' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINcode128.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINcode39' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINcode39.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINcode39extended' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINcode39extended.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINcode93' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINcode93.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINean13' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINean13.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINean8' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINean8.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINgs1128' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINgs1128.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINi25' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINi25.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINintelligentmail' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINintelligentmail.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINisbn' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINisbn.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINmsi' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINmsi.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINothercode' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINothercode.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINpostnet' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINpostnet.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINs25' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINs25.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINupca' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINupca.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINupce' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINupce.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINupcext2' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINupcext2.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\CINupcext5' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/CINupcext5.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\Drawer\\CINDraw' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/Drawer/CINDraw.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\Drawer\\CINDrawJPG' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/Drawer/CINDrawJPG.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\Drawer\\CINDrawPNG' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/Drawer/CINDrawPNG.php',
+        'CodeItNow\\BarcodeBundle\\Generator\\JoinDraw' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Generator/JoinDraw.php',
+        'CodeItNow\\BarcodeBundle\\Utils\\BarcodeGenerator' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Utils/BarcodeGenerator.php',
+        'CodeItNow\\BarcodeBundle\\Utils\\BarcodeType' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Utils/BarcodeType.php',
+        'CodeItNow\\BarcodeBundle\\Utils\\QrCode' => __DIR__ . '/..' . '/codeitnowin/barcode/CodeItNow/BarcodeBundle/Utils/QrCode.php',
         'CondicaoSeeder' => __DIR__ . '/../..' . '/database/seeds/CondiacaoSeeder.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/CronExpression.php',
@@ -1784,9 +1827,9 @@ class ComposerStaticInit6edb7dabf077d53561a43166bb31c0ba
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
-        'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/ConsoleColor.php',
-        'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/JakubOnderka/PhpConsoleColor/InvalidStyleException.php',
-        'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/JakubOnderka/PhpConsoleHighlighter/Highlighter.php',
+        'JakubOnderka\\PhpConsoleColor\\ConsoleColor' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/ConsoleColor.php',
+        'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/InvalidStyleException.php',
+        'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/Highlighter.php',
         'JeroenNoten\\LaravelAdminLte\\AdminLte' => __DIR__ . '/..' . '/jeroennoten/laravel-adminlte/src/AdminLte.php',
         'JeroenNoten\\LaravelAdminLte\\Console\\AdminLteMakeCommand' => __DIR__ . '/..' . '/jeroennoten/laravel-adminlte/src/Console/AdminLteMakeCommand.php',
         'JeroenNoten\\LaravelAdminLte\\Console\\MakeAdminLteCommand' => __DIR__ . '/..' . '/jeroennoten/laravel-adminlte/src/Console/MakeAdminLteCommand.php',
@@ -1854,9 +1897,14 @@ class ComposerStaticInit6edb7dabf077d53561a43166bb31c0ba
         'League\\Flysystem\\Util\\StreamHasher' => __DIR__ . '/..' . '/league/flysystem/src/Util/StreamHasher.php',
         'MarcaSeeder' => __DIR__ . '/../..' . '/database/seeds/MarcaSeeder.php',
         'Mockery' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
+        'Mockery\\Adapter\\Phpunit\\Legacy\\TestListenerForV5' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/Legacy/TestListenerForV5.php',
+        'Mockery\\Adapter\\Phpunit\\Legacy\\TestListenerForV6' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/Legacy/TestListenerForV6.php',
+        'Mockery\\Adapter\\Phpunit\\Legacy\\TestListenerForV7' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/Legacy/TestListenerForV7.php',
+        'Mockery\\Adapter\\Phpunit\\Legacy\\TestListenerTrait' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/Legacy/TestListenerTrait.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegration' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegration.php',
         'Mockery\\Adapter\\Phpunit\\MockeryTestCase' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryTestCase.php',
         'Mockery\\Adapter\\Phpunit\\TestListener' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/TestListener.php',
+        'Mockery\\ClosureWrapper' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/ClosureWrapper.php',
         'Mockery\\CompositeExpectation' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/CompositeExpectation.php',
         'Mockery\\Configuration' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Configuration.php',
         'Mockery\\Container' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Container.php',
@@ -1978,6 +2026,7 @@ class ComposerStaticInit6edb7dabf077d53561a43166bb31c0ba
         'Monolog\\Handler\\HandlerWrapper' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/HandlerWrapper.php',
         'Monolog\\Handler\\HipChatHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/HipChatHandler.php',
         'Monolog\\Handler\\IFTTTHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/IFTTTHandler.php',
+        'Monolog\\Handler\\InsightOpsHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/InsightOpsHandler.php',
         'Monolog\\Handler\\LogEntriesHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/LogEntriesHandler.php',
         'Monolog\\Handler\\LogglyHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/LogglyHandler.php',
         'Monolog\\Handler\\MailHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Handler/MailHandler.php',
@@ -2016,11 +2065,15 @@ class ComposerStaticInit6edb7dabf077d53561a43166bb31c0ba
         'Monolog\\Processor\\MemoryUsageProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/MemoryUsageProcessor.php',
         'Monolog\\Processor\\MercurialProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/MercurialProcessor.php',
         'Monolog\\Processor\\ProcessIdProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/ProcessIdProcessor.php',
+        'Monolog\\Processor\\ProcessorInterface' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/ProcessorInterface.php',
         'Monolog\\Processor\\PsrLogMessageProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/PsrLogMessageProcessor.php',
         'Monolog\\Processor\\TagProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/TagProcessor.php',
         'Monolog\\Processor\\UidProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/UidProcessor.php',
         'Monolog\\Processor\\WebProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Processor/WebProcessor.php',
         'Monolog\\Registry' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Registry.php',
+        'Monolog\\ResettableInterface' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/ResettableInterface.php',
+        'Monolog\\SignalHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/SignalHandler.php',
+        'Monolog\\Utils' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Utils.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/AssertionFailedError.php',
@@ -2678,6 +2731,7 @@ class ComposerStaticInit6edb7dabf077d53561a43166bb31c0ba
         'PhpParser\\PrettyPrinterAbstract' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/PrettyPrinterAbstract.php',
         'PhpParser\\PrettyPrinter\\Standard' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/PrettyPrinter/Standard.php',
         'ProdutoSeeder' => __DIR__ . '/../..' . '/database/seeds/ProdutoSeeder.php',
+        'PromocaoSeeder' => __DIR__ . '/../..' . '/database/seeds/PromocaoSeeder.php',
         'Prophecy\\Argument' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument.php',
         'Prophecy\\Argument\\ArgumentsWildcard' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument/ArgumentsWildcard.php',
         'Prophecy\\Argument\\Token\\AnyValueToken' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Argument/Token/AnyValueToken.php',

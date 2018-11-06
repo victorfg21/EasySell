@@ -97,4 +97,22 @@
             </div>
         </div>
     </div>
+    <div class="box-header with-border"> 
+        <h3 class="box-title">Código de Barra</h3>
+    </div>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-5">
+                            @if(isset($registro->codigo_barra))
+                                <img src="data:image/png;base64,{{ $registro->codigo_barra }}" />
+                            @endif
+                        </div>
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>
 </div>
