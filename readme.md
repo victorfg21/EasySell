@@ -1,6 +1,6 @@
 ## Sobre Projeto - easySell
 
-Projeto desenvolvido para estudo principalmente do framework Laravel e também utilização de outras ferramentas, tecnologias e linguagens, como PHP, JavaScript, CSS, JQuery, Bootstrap e PostgreSql.
+Projeto desenvolvido para estudo principalmente do framework Laravel e também utilização de outras ferramentas, tecnologias e linguagens, como PHP, JavaScript, CSS, JQuery, Bootstrap e PostgreSql. Foi utilizado no projeto o template dashboard AdminLTE disponível no endereço https://adminlte.io
 
 <br>
 
