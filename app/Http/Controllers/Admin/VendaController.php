@@ -12,6 +12,7 @@ use App\Cliente;
 use App\Vendedor;
 use App\Pagamento;
 use App\Promocao;
+use App\Produto;
 
 class VendaController extends Controller
 {
@@ -63,5 +64,14 @@ class VendaController extends Controller
         Venda::find($id)->delete();
 
         return redirect()->route('admin.vendas');
+    }
+
+    public function consultaProduto($idProduto){
+        $registro = Produto::find($idProduto);
+        if (!$registro){
+            return response()->json(['error' => 'Produto não foi encontrado']);
+       }
+       
+       return $registro;
     }
 }

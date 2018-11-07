@@ -81,19 +81,19 @@
                             <div class="col-md-1">
                                 <div class="form-group">
                                     <label for="ID" class="control-label">ID</label>
-                                    <input for="ID" class="form-control" type="text" name="id" value="" disabled/>
+                                    <input for="ID" class="form-control" type="text" name="idProduto" value="" disabled/>
                                 </div>
                             </div>
                             <div class="col-md-9">
                                 <div class="form-group">
                                     <label for="Produto" class="control-label">Produto</label>
-                                    <input for="Produto" class="form-control" type="text" name="produto" value="" disabled/>
+                                    <input for="Produto" class="form-control" type="text" name="descProduto" value="" disabled/>
                                </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <label for="ValUnit" class="control-label">Valor Unitário</label>
-                                    <input for="ValUnit" class="form-control" type="text" name="valUnit" value="" disabled/>
+                                    <input for="ValUnit" class="form-control" type="text" name="valUnitProduto" value="" disabled/>
                                </div>
                             </div>
                         </div>
@@ -103,10 +103,10 @@
                                     <label for="CodBarra" class="control-label">Código de Barras</label>
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <input for="CodBarra" class="form-control cep" type="text" name="cep" value=""/>
+                                            <input for="CodBarra" class="form-control" type="text" name="codBarra" value=""/>
                                         </div>
                                         <div class="col-md-2">
-                                            <a class="btn btn-default" id="codigoBarra">Buscar Produto</a>
+                                            <a class="btn btn-default" id="btnGetProduto">Buscar Produto</a>
                                         </div>  
                                     </div>
                                 </div>                                        
@@ -114,12 +114,12 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="Quantidade" class="control-label">Quantidade</label>
-                                    <input for="Quantidade" class="form-control quantidade" type="text" name="quantidade" value="" required/>
+                                    <input for="Quantidade" class="form-control quantidade" type="text" name="qtdProduto" value="" required/>
                                 </div>         
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <input type="button" class="btn btn-primary btn-md" name="adicionarItem" onclick="adicionaItemPedido()" value="Adicionar"/>
+                                    <a class="btn btn-primary btn-md" id="btnSetItem">Adicionar</a>
                                 </div>         
                             </div>
                         </div>
@@ -136,33 +136,12 @@
                                         <th class="col-xs-1">Remover</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            1
-                                        </td>
-
-                                        <td>
-                                            Calcinha XY Rosa
-                                        </td>
-
-                                        <td>
-                                            15
-                                        </td>
-
-                                        <td>
-                                            R$ 9,89
-                                        </td>
-
-                                        <td>
-                                            <i class="fa fa-trash fa-lg"></i>
-                                        </td>
-                                    </tr>                                
+                                <tbody>                                                                
                                 </tbody>
                                 <tfoot>
                                     <tr>
                                         <td>
-                                            <button class="btn btn-primary btn-md" name="limparCarrinho">Limpar Carrinho</button> 
+                                            <a class="btn btn-primary btn-md" id="btnDelPedido">Cancelar Pedido</a> 
                                         </td>
                                     </tr>
                                 </tfoot>
@@ -193,62 +172,5 @@
     </div>
 </div>
 
-<script language="text/javascript">
-    // Função responsável por inserir linhas na tabela
-    function adicionaItemPedido() {
-        alert('tarammmmm!!');
-        // Captura a referência da tabela com id “minhaTabela”
-        var table = $('#linhasVenda');
-        // Captura a quantidade de linhas já existentes na tabela
-        var numOfRows = table.rows.length;
-        // Captura a quantidade de colunas da última linha da tabela
-        var numOfCols = table.rows[numOfRows-1].cells.length;
-
-        // Insere uma linha no fim da tabela.
-        var newRow = table.insertRow(numOfRows);
-
-        var idProduto = $('input[name="id"]').val()
-        var descProduto = $('input[name="produto"]').val()
-        var qtd = $('input[name="quantidade"]').val()
-        var valUnit = $('input[name="valUnit"]').val()
-
-        if((idProduto !== null && idProduto !== '') &&
-            (descProduto !== null && descProduto !== '') &&
-            (qtd !== null && qtd !== '') &&
-            (valUnit !== null && valUnit !== ''))
-        {
-            // Faz um loop para criar as colunas
-            for (var j = 0; j < numOfCols; j++) {
-                // Insere uma coluna na nova linha 
-                newCell = newRow.insertCell(j);
-
-                switch(j){
-                    case 0:
-                        newCell.innerHTML = idProduto;
-                        break;
-
-                    case 1:
-                        newCell.innerHTML = descProduto;
-                        break;
-
-                    case 2:
-                        newCell.innerHTML = qtd;
-                        break;
-
-                    case 3:
-                        newCell.innerHTML = valUnit;
-                        break;
-
-                    case 4:
-                    newCell.innerHTML = '<a onclick="removeItemPedido()"><i class="fa fa-trash fa-lg"></i></a>';
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
-        else{
-            alert("Favor informar o produto que será adicionado e a quantidade!");
-        }       
-    }
-</script>
+<script src="{{ asset('js/buscarProdutoAjax.js') }}"></script>
+<script src="{{ asset('js/adicionaLinhaVenda.js') }}"></script>

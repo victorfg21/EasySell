@@ -76,7 +76,8 @@ Route::put('admin/estoque/saida', ['as' => 'admin.estoque.saida', 'uses' => 'Adm
 Route::get('admin/vendas', ['as' => 'admin.vendas', 'uses' => 'Admin\VendaController@index']);
 Route::get('admin/vendas/novo', ['as' => 'admin.vendas.novo', 'uses' => 'Admin\VendaController@novo']);
 Route::post('admin/vendas/salvar', ['as' => 'admin.vendas.salvar', 'uses' => 'Admin\VendaController@salvar']);
-Route::get('admin/vendas/cancelar/{id}', ['as' => 'admin.vendas.cancelar', 'uses' => 'Admin\VendaController@cancelar']);
+Route::put('admin/vendas/cancelar/{id}', ['as' => 'admin.vendas.cancelar', 'uses' => 'Admin\VendaController@cancelar']);
+Route::get('admin/vendas/produto/{id}', ['as' => 'admin.vendas.produto', 'uses' => 'Admin\VendaController@consultaProduto']);
 
 //Pagamentos
 Route::get('admin/pagamentos', ['as' => 'admin.pagamentos', 'uses' => 'Admin\PagamentoController@index']);
