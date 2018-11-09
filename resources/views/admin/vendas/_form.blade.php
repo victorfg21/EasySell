@@ -163,7 +163,7 @@
         </div>
         <div class="col-md-3">
             <label for="TotAcresc" class="control-label">Total Acréscimos</label>
-            <input for="TotAcresc" class="form-control" type="text" name="totAcresc" value="{{ isset($registro->total_acrescimos) ? $registro->total_acrescimos : '0,00' }}" disabled/>
+            <input for="TotAcresc" class="form-control dinheiro" type="text" name="totAcresc" value="{{ isset($registro->total_acrescimos) ? $registro->total_acrescimos : '0,00' }}" disabled/>
         </div>
         <div class="col-md-3">
             <label for="TotFinal" class="control-label">Valor Total</label>
