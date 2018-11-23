@@ -59,6 +59,10 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
 @endif
 
+<!-- JQuery DataTable -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+
 @if(config('adminlte.plugins.datatables'))
     <!-- DataTables with bootstrap 3 renderer -->
     <script src="//cdn.datatables.net/v/bs/dt-1.10.18/datatables.min.js"></script>
@@ -72,6 +76,7 @@
 <!--JavaScript do Sistema-->
 <script src="{{ asset('js/cep.js') }}"></script>
 <script src="{{ asset('js/mascaraform.js') }}"></script>
+<script src="{{ asset('js/datatable-pesquisa.js') }}"></script>
 
 @yield('adminlte_js')
 

@@ -14,7 +14,7 @@
     </div>
     <div class="box-body">
         <div class="table-responsive">
-            <table class="table table-hover table-striped">
+            <table class="table table-hover table-striped tabela-pesquisa">
                 <thead>
                     <tr>
                         <th>Descrição</th>

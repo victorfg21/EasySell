@@ -1,6 +1,10 @@
-<div class="box">
+<div class="box box-solid box-primary" data-widget="box-widget">
     <div class="box-header with-border"> 
         <h3 class="box-title">Dados Gerais</h3>
+        <div class="box-tools">
+            <!-- This will cause the box to collapse when clicked -->
+            <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+        </div>
     </div>
     <div class="box-body">
         <div class="form-group">
@@ -9,7 +13,7 @@
         </div>
         <div class="form-group">
             <label for="Fornecedor" class="control-label">Fornecedor</label>
-            <select for="Fornecedor" class="form-control js-example-basic-single" name="fornecedor" required>
+            <select for="Fornecedor" class="form-control js-example-basic-single js-states form-control" name="fornecedor" required>
                 @foreach ($fornecedor_list as $item => $nome)
                     @if(isset($registro->Fornecedor->id))
                         @if ($item == $registro->Fornecedor->id)
@@ -41,7 +45,7 @@
         </div>
         <div class="form-group">
             <label for="Marca" class="control-label">Marca</label>
-            <select for="Marca" class="form-control js-example-basic-single" name="marca" required>
+            <select for="Marca" class="form-control js-example-basic-single js-states form-control" name="marca" required>
                 @foreach ($marca_list as $item => $descricao)
                     @if(isset($registro->Marca->id))
                         @if ($item == $registro->Marca->id)
@@ -57,7 +61,7 @@
         </div>
         <div class="form-group">
             <label for="Modelo" class="control-label">Modelo</label>
-            <select for="Modelo" class="form-control js-example-basic-single" name="modelo" required>
+            <select for="Modelo" class="form-control js-example-basic-single js-states form-control" name="modelo" required>
                 @foreach ($modelo_list as $item => $descricao)
                     @if(isset($registro->Modelo->id))
                         @if ($item == $registro->Modelo->id)
@@ -83,6 +87,10 @@
 
     <div class="box-header with-border"> 
         <h3 class="box-title">Foto</h3>
+        <div class="box-tools">
+            <!-- This will cause the box to collapse when clicked -->
+            <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+        </div>
     </div>
     <div class="box-body">
         <div class="row">
@@ -99,6 +107,10 @@
     </div>
     <div class="box-header with-border"> 
         <h3 class="box-title">Código de Barra</h3>
+        <div class="box-tools">
+            <!-- This will cause the box to collapse when clicked -->
+            <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
+        </div>
     </div>
     <div class="box-body">
         <div class="row">

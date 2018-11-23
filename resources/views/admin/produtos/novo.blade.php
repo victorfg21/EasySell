@@ -8,9 +8,13 @@
 
 @section('content')
 
-<div class="box">
+<div class="box" data-widget="box-widget">
     <div class="box-header">
         <h3 class="box-title">Cadastrar Produto</h3>
+    </div>
+    <div class="box-tools">
+        <!-- This will cause the box to collapse when clicked -->
+        <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
     </div>
     <div class="box-body">
         <form action="{{ route('admin.produtos.salvar') }}" method="POST" enctype="multipart/form-data">

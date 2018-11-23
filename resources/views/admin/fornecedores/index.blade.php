@@ -14,7 +14,7 @@
     </div>
     <div class="box-body">
         <div class="table-responsive">
-            <table class="table table-hover table-striped">
+            <table class="table table-hover table-striped tabela-pesquisa">
                 <thead class="thead-dark">
                     <tr>
                         <th class="col-xs-6">Nome</th>

@@ -1,4 +1,4 @@
-<div class="box">
+<div class="box box-solid box-primary">
     <div class="box-header with-border"> 
         <h3 class="box-title">Dados Gerais</h3>
     </div>
@@ -33,11 +33,11 @@
     </div>
     <div class="box-body">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="form-group">
                     <label for="Cep" class="control-label">CEP</label>
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-md-6">
                             <input for="Cep" class="form-control cep" type="text" name="cep" value="{{ isset($registro->cep) ? $registro->cep : '' }}"/>
                         </div>
                         <div class="col-md-2">
@@ -45,34 +45,38 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-4">
+                <label for="Endereco" class="control-label">Endereço</label>
+                <input for="Endereco" class="form-control" type="text" name="endereco" value="{{ isset($registro->endereco) ? $registro->endereco : '' }}" required/>
+            </div>
+            <div class="col-md-1">
+                <label for="Numero" class="control-label">Número</label>
+                <input for="Numero" class="form-control" type="text" name="numero" value="{{ isset($registro->numero) ? $registro->numero : '' }}" required/>
+            </div>
+            <div class="col-md-3">
+                <label for="Complemento" class="control-label">Complemento</label>
+                <input for="Complemento" class="form-control" type="text" name="complemento" value="{{ isset($registro->complemento) ? $registro->complemento : '' }}"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
                 <div class="form-group">
                     <label for="Bairro" class="control-label">Bairro</label>
                     <input for="Bairro" class="form-control" type="text" name="bairro" value="{{ isset($registro->bairro) ? $registro->bairro : '' }}" required/>
                 </div>
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="form-group">
-                            <label for="Endereco" class="control-label">Endereço</label>
-                            <input for="Endereco" class="form-control" type="text" name="endereco" value="{{ isset($registro->endereco) ? $registro->endereco : '' }}" required/>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label for="Numero" class="control-label">Número</label>
-                            <input for="Numero" class="form-control" type="text" name="numero" value="{{ isset($registro->numero) ? $registro->numero : '' }}" required/>
-                        </div>
-                    </div>
-                </div> 
             </div>
             <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Cidade" class="control-label">Cidade</label>
+                    <input for="Cidade" class="form-control" type="text" name="cidade" value="{{ isset($registro->cidade) ? $registro->cidade : '' }}" required/>
+                </div>
+            </div>
+            <div class="col-md-2">
                 <div class="form-group">
                     <label for="UF" class="control-label">UF</label>
                     <input type="text" name="hiddenEstadoSigla" value="{{ isset($registro->estado) ? $registro->estado : '' }}" hidden>
                     <select id="comboEstado" for="UF" name="estado" class="form-control" required></select>
-                </div>
-                <div class="form-group">
-                    <label for="Cidade" class="control-label">Cidade</label>
-                    <input for="Cidade" class="form-control" type="text" name="cidade" value="{{ isset($registro->cidade) ? $registro->cidade : '' }}" required/>
                 </div>
             </div>
         </div>

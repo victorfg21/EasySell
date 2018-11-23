@@ -1,4 +1,4 @@
-<div class="box">
+<div class="box box-solid box-primary">
     <div class="box-header with-border"> 
         <h3 class="box-title">Dados Gerais</h3>
     </div>

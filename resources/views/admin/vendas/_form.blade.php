@@ -1,4 +1,4 @@
-<div class="box panel panel-default">
+<div class="box box-solid box-primary">
     <div class="box-body">
         <div class="form-group">
             <label for="Cliente" class="control-label">Cliente</label>
