@@ -45,6 +45,7 @@ class ProdutoController extends Controller
 
     public function salvar(Request $req)
     {
+        $metodos = new Metodos();
         $dados = $req->all();
         $dados['peso'] = $metodos->moeda($dados['peso']);
         $dados['valor'] = $metodos->moeda($dados['valor']);
