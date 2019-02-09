@@ -10,4 +10,5 @@ $(document).ready(function () {
     $('.dinheiro').mask("#.##0,00" , { reverse:true});
 
     $('.js-example-basic-single').select2();
+    $('.js-example-basic-multiple').select2();
 });
